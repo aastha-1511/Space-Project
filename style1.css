@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 body{
-    background: black;
+    background-color: black;
+    background-size: cover;
     overflow: hidden;
 }
 .container{
@@ -17,9 +18,11 @@ body{
     background: #d0d8f3;
     box-shadow:0 30px 50px grey;
 }
+
 .container .slide .item{
     width:200px;
     height:300px;
+    flex-shrink: 0;
     position:absolute;
     top:50%;
     transform:translate(0,-50%);
@@ -29,9 +32,25 @@ body{
     background-size:cover;
     display:inline-block;
     transition:0.5s;
+   
 }
-.slide .item:nth-child(1),
-.slide .item:nth-child(2){
+.slide .item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #7f6f6f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+}
+
+.slide .item:nth-child(1)/*,
+.slide .item:nth-child(2)*/{
     top:0;
     left:0;
     transform:translate(0,0);
@@ -40,17 +59,17 @@ body{
     height:100%;
 }
 
-.slide .item:nth-child(3){
+.slide .item:nth-child(2){
     left:50%;
 }
-.slide .item:nth-child(4){
+.slide .item:nth-child(3){
     left:calc(50% + 220px);
 }
-.slide .item:nth-child(5){
+.slide .item:nth-child(4){
     left:calc(50% + 440px);
 }
 /*n=0,1,2,3,4,5,6.....*/
-.slide .item:nth-child(n+6){
+.slide .item:nth-child(n+5){
     left:calc(50% + 660px);
     opacity:0;
 }
@@ -65,7 +84,7 @@ body{
     font-family:system-ui;
     display:none;
 }
-.slide .item:nth-child(2) .content{
+.slide .item:nth-child(1) .content{
     display: block;
 }
 
@@ -111,13 +130,16 @@ body{
     to{
         opacity:1;
         transform:translate(0);
-        -webkit-transform:translate(0);
-        -moz-transform:translate(0);
-        -ms-transform:translate(0);
-        -o-transform:translate(0);
         filter:blur(0);
-        -webkit-filter:blur(0);
 }
+}
+@media screen and (max-width: 1080px){
+    .container .slide .item .content{
+        padding-right:10px;
+    }
+    .container .slide .item .content .name{
+        font-size:20px;
+    }
 }
 .button{
     width:100%;
@@ -137,4 +159,33 @@ body{
 .button button:hover{
     background: #adabab;
     color:#fff;
+}
+.image-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.static-image, .animated-gif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: opacity 0.3s ease;
+}
+.static-image{
+    opacity: 1;
+}
+.animated-gif{
+    opacity: 0;
+}
+.image-container:hover .static-image{
+    opacity: 0;
+}
+.image-container:hover .animated-gif{
+    opacity: 1;
 }
