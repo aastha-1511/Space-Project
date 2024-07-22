@@ -3,9 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="style.css">
+  
   <title>Document</title>
+ <!-- <script src="https://cdn.tailwindcss.com"></script>-->
 </head>
 <body>
   <h1 class='logo'>
@@ -145,9 +150,12 @@
     </div>
     <div class='solar_systm'>
       <div class='earth planet'>
-        <div class='moon moon'>
+        <div class='moon moon' data-popup="moonp">
           <h3>Moon</h3>
           <h2>Moon</h2>
+          <div class="popup" data-popup="moonp">
+            <i class="fa-solid fa-arrow-left">CLICK ME</i>
+          </div>
         </div>
         <div class='m trajectory'></div>
         <div class='earth planet_description'>
@@ -166,14 +174,20 @@
     </div>
     <div class='solar_systm'>
       <div class='mars planet'>
-        <div class='deimos moon'>
+        <div class='deimos moon' data-popup="deimosp">
           <h3>Moon</h3>
           <h2>Deimos</h2>
+          <div class="popup" data-popup="deimosp">
+            <i class="fa-solid fa-arrow-left">CLICK ME</i>
+          </div>
         </div>
         <div class='d trajectory'></div>
-        <div class='moon phoebos'>
+        <div class='moon phoebos' data-popup="phoebosp">
           <h3>Moon</h3>
           <h2>Phoebos</h2>
+          <div class="popup" data-popup="phoebosp">
+            <i class="fa-solid fa-arrow-left">CLICK ME</i>
+          </div>
         </div>
         <div class='p trajectory'></div>
         <div class='mars planet_description'>
@@ -192,17 +206,26 @@
     </div>
     <div class='solar_systm'>
       <div class='jupiter planet'>
-        <div class='lo moon'>
+        <div class='lo moon' data-popup="iop">
           <h3>Moon</h3>
           <h2>Io</h2>
+          <div class="popup" data-popup="iop">
+            <i class="fa-solid fa-arrow-left">CLICK ME</i>
+          </div>
         </div>
-        <div class='europa moon'>
+        <div class='europa moon' data-popup="europap">
           <h3>Moon</h3>
           <h2>Europa</h2>
+          <div class="popup" data-popup="europap">
+            <i class="fa-solid fa-arrow-left">CLICK ME</i>
+          </div>
         </div>
-        <div class='ganymede moon'>
+        <div class='ganymede moon' data-popup="ganymedep">
           <h3>Moon</h3>
           <h2>Ganymede</h2>
+          <div class="popup" data-popup="ganymedep">
+            <i class="fa-solid fa-arrow-left"> CLICK ME </i>
+          </div>
         </div>
         <div class='lop trajectory'></div>
         <div class='eu trajectory'></div>
@@ -223,17 +246,26 @@
     </div>
     <div class='solar_systm'>
       <div class='planet saturn'>
-        <div class='moon titan'>
+        <div class='moon titan' data-popup="titanp">
           <h3>Moon</h3>
           <h2>Titan</h2>
+          <div class="popup" data-popup="titanp">
+            <i class="fa-solid fa-arrow-left">CLICK ME</i>
+          </div>
         </div>
-        <div class='dione moon'>
+        <div class='dione moon' data-popup="dionep">
           <h3>Moon</h3>
           <h2>Dione</h2>
+          <div class="popup" data-popup="dionep">
+            <i class="fa-solid fa-arrow-left">CLICK ME</i>
+          </div>
         </div>
-        <div class='enceladus moon'>
+        <div class='enceladus moon' data-popup="enceladusp">
           <h3>Moon</h3>
           <h2>Enceladus</h2>
+          <div class="popup" data-popup="enceladusp">
+            <i class="fa-solid fa-arrow-left">CLICK ME</i>
+          </div>
         </div>
         <div class='ti trajectory'></div>
         <div class='di trajectory'></div>
@@ -254,17 +286,26 @@
     </div>
     <div class='solar_systm'>
       <div class='planet uranus'>
-        <div class='miranda moon'>
+        <div class='miranda moon' data-popup="mirandap">
           <h3>Moon</h3>
           <h2>Miranda</h2>
+          <div class="popup" data-popup="mirandap">
+            <i class="fa-solid fa-arrow-left">CLICK ME</i>
+          </div>
         </div>
-        <div class='ariel moon'>
+        <div class='ariel moon' data-popup="aerielp">
           <h3>Moon</h3>
           <h2>Ariel</h2>
+          <div class="popup" data-popup="aerielp">
+            <i class="fa-solid fa-arrow-left">CLICK ME</i>
+          </div>
         </div>
-        <div class='moon umbriel'>
+        <div class='moon umbriel' data-popup="umbrielp">
           <h3>Moon</h3>
           <h2>Umbriel</h2>
+          <div class="popup" data-popup="umbrielp">
+            <i class="fa-solid fa-arrow-left">CLICK ME</i>
+          </div>
         </div>
         <div class='mir trajectory'></div>
         <div class='ari trajectory'></div>
@@ -285,17 +326,26 @@
     </div>
     <div class='solar_systm'>
       <div class='neptune planet'>
-        <div class='moon triton'>
+        <div class='moon triton' data-popup="tritonp">
           <h3>Moon</h3>
           <h2>Triton</h2>
+          <div class="popup" data-popup="tritonp">
+            <i class="fa-solid fa-arrow-left">CLICK ME</i>
+          </div>
         </div>
-        <div class='moon proteus'>
+        <div class='moon proteus' data-popup="proteusp">
           <h3>Moon</h3>
           <h2>Proteus</h2>
+          <div class="popup" data-popup="proteusp">
+            <i class="fa-solid fa-arrow-left">CLICK ME</i>
+          </div>
         </div>
-        <div class='moon nereid'>
+        <div class='moon nereid' data-popup="nereidp">
           <h3>Moon</h3>
           <h2>Nereid</h2>
+          <div class="popup" data-popup="nereidp">
+            <i class="fa-solid fa-arrow-left">CLICK ME</i>
+          </div>
         </div>
         <div class='trajectory tri'></div>
         <div class='pro trajectory'></div>
@@ -303,11 +353,11 @@
         <div class='neptune planet_description'>
           <h2>Planet</h2>
           <h1>Neptune</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+          <p>Dark, cold, and whipped by supersonic winds, ice giant Neptune is more than 30 times as far from the Sun as Earth. Neptune is the only planet in our solar system not visible to the naked eye. In 2011 Neptune completed its first 165-year orbit since its discovery in 1846.</p>
           <label for='readNeptune'>
             <a>
               Read Mor
-              <span>e     </span>
+              <span>e</span>
             </a>
           </label>
         </div>
@@ -323,7 +373,7 @@
           <label for='readPluto'>
             <a>
               Read Mor
-              <span>e     </span>
+              <span>e</span>
             </a>
           </label>
         </div>
@@ -338,9 +388,9 @@
     <h1>Mercury</h1>
     <p>Mercury is the closest planet to the sun. As such, it circles the sun faster than all the other planets, which is why Romans named it after their swift-footed messenger god.</p>
     <p>The Sumerians also knew of Mercury since at least 5,000 years ago. It was often associated with Nabu, the god of writing. Mercury was also given separate names for its appearance as both a morning star and as an evening star. Greek astronomers knew, however, that the two names referred to the same body, and Heraclitus, around 500 B.C., correctly thought that both Mercury and Venus orbited the sun, not Earth.</p>
-    <img src='https://i2.wp.com/www.astronomytrek.com/wp-content/uploads/2012/11/mercury-1.jpg?fit=678%2C381&ssl=1'>
+    <img src='https://i2.wp.com/www.astronomytrek.com/wp-content/uploads/2012/11/mercury-1.jpg?fit=678%2C381&ssl=1' alt="1">
     <h2>A year on Mercury is just 88 days long.</h2>
-    <p>One solar day (the time from noon to noon on the planet’s surface) on Mercury lasts the equivalent of 176 Earth days while the sidereal day (the time for 1 rotation in relation to a fixed point) lasts 59 Earth days. Mercury is nearly tidally locked to the Sun and over time this has slowed the rotation of the planet to almost match its orbit around the Sun. Mercury also has the highest orbital eccentricity of all the planets with its distance from the Sun ranging from 46 to 70 million km.</p>
+    <p>One solar day (the time from noon to noon on the planet's surface) on Mercury lasts the equivalent of 176 Earth days while the sidereal day (the time for 1 rotation in relation to a fixed point) lasts 59 Earth days. Mercury is nearly tidally locked to the Sun and over time this has slowed the rotation of the planet to almost match its orbit around the Sun. Mercury also has the highest orbital eccentricity of all the planets with its distance from the Sun ranging from 46 to 70 million km.</p>
     <h2>Mercury is the smallest planet in the Solar Systm.</h2>
     <p>One of five planets visible with the naked eye a, Mercury is just 4,879 Kilometres across its equator, compared with 12,742 Kilometres for the Earth.</p>
     <h2>Mercury is the second densest planet. </h2>
@@ -356,7 +406,7 @@
     <h1>Venus</h1>
     <p>Venus, the second planet from the sun, is named for the Roman goddess of love and beauty. The planet — the only planet named after a female — may have been named for the most beautiful deity of her pantheon because it shone the brightest of the five planets known to ancient astronomers.</p>
     <p>In ancient times, Venus was often thought to be two different stars, the evening star and the morning star — that is, the ones that first appeared at sunset and sunrise. In Latin, they were respectively known as Vesper and Lucifer. In Christian times, Lucifer, or "light-bringer," became known as the name of Satan before his fall. However, further observations of Venus in the space age show a very hellish environment. This makes Venus a very difficult planet to observe from up close, because spacecraft do not survive long on its surface.</p>
-    <img src='https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2014/2-whatistheave.jpg'>
+    <img src='https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2014/2-whatistheave.jpg' alt="2">
     <h2>A day on Venus lasts longer than a year. </h2>
     <p>It takes 243 Earth days to rotate once on its axis (sidereal day). The planet’s orbit around the Sun takes 225 Earth days, compared to the Earth’s 365. A day on the surface of Venus (solar day) takes 117 Earth days.</p>
     <h2>Venus rotates in the opposite direction to most other planets. </h2>
@@ -374,7 +424,7 @@
     <h1>Earth</h1>
     <p>Earth, our home, is the third planet from the sun. It is the only planet known to have an atmosphere containing free oxygen, oceans of liquid water on its surface, and, of course, life.</p>
     <p>Earth is the fifth largest of the planets in the solar systm — smaller than the four gas giants, Jupiter, Saturn, Uranusand Neptune, but larger than the three other rocky planets, </p>
-    <img src='https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&h=350'>
+    <img src='https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&h=350' alt="3">
     <h2>The Earth’s rotation is gradually slowing.</h2>
     <p>This deceleration is happening almost imperceptibly, at approximately 17 milliseconds per hundred years, although the rate at which it occurs is not perfectly uniform. This has the effect of lengthening our days, but it happens so slowly that it could be as much as 140 million years before the length of a day will have increased to 25 hours.</p>
     <h2>The Earth was once believed to be the centre of the universe.</h2>
@@ -391,7 +441,7 @@
   <div class='panel'>
     <h1>Mars</h1>
     <p>Mars is the fourth planet from the sun. Befitting the red planet's bloody color, the Romans named it after their god of war. The Romans copied the ancient Greeks, who also named the planet after their god of war, Ares. Other civilizations also typically gave the planet names based on its color — for example, the Egyptians named it "Her Desher," meaning "the red one," while ancient Chinese astronomers dubbed it "the fire star."</p>
-    <img src='https://1.bp.blogspot.com/-ou7Je3OVg6U/WYtxDqjNp_I/AAAAAAAACSQ/fsopS5VtFg4bmlv8hQNfiRYfJqTygCotQCLcBGAs/s2048/Martian%2Blandscape%2Bby%2BAmante%2BLombardi.jpg'>
+    <img src='https://1.bp.blogspot.com/-ou7Je3OVg6U/WYtxDqjNp_I/AAAAAAAACSQ/fsopS5VtFg4bmlv8hQNfiRYfJqTygCotQCLcBGAs/s2048/Martian%2Blandscape%2Bby%2BAmante%2BLombardi.jpg' alt="4">
     <h2>Mars and Earth have approximately the same landmass.</h2>
     <p>Even though Mars has only 15% of the Earth’s volume and just over 10% of the Earth’s mass, around two thirds of the Earth’s surface is covered in water. Martian surface gravity is only 37% of the Earth’s (meaning you could leap nearly three times higher on Mars).</p>
     <h2>Mars is home to the tallest mountain in the solar systm.</h2>
@@ -409,7 +459,7 @@
     <h1>Jupiter</h1>
     <p>Jupiter is the largest planet in the solar systm. Fittingly, it was named after the king of the gods in Roman mythology. In a similar manner, the ancient Greeks named the planet after Zeus, the king of the Greek pantheon.</p>
     <p>Jupiter helped revolutionize the way we saw the universe and ourselves in 1610, when Galileo discovered Jupiter's four large moons — Io, Europa, Ganymede and Callisto, now known as the Galilean moons. This was the first time that celestial bodies were seen circling an object other than Earth, major support of the Copernican view that Earth was not the center of the universe.</p>
-    <img src='http://hanaleikauaivacation.com/wp-content/uploads/parser/jupiter-landscape-1.jpg'>
+    <img src='http://hanaleikauaivacation.com/wp-content/uploads/parser/jupiter-landscape-1.jpg' alt="5">
     <h2>Jupiter is the fourth brightest object in the solar systm.</h2>
     <p>Only the Sun, Moon and Venus are brighter. It is one of five planets visible to the naked eye from Earth.</p>
     <h2>The ancient Babylonians were the first to record their sightings of Jupiter.</h2>
@@ -427,7 +477,7 @@
     <h1>Saturn</h1>
     <p>Saturn is the sixth planet from the sun and the second largest planet in the solar systm. Saturn was the Roman name for Cronus, the lord of the Titans in Greek mythology. Saturn is the root of the English word "Saturday."</p>
     <p>Saturn is the farthest planet from Earth visible to the naked human eye, but it is through a telescope that the planet's most outstanding features can be seen: Saturn's rings. Although the other gas giants in the solar systm — Jupiter, Uranus and Neptune — also have rings, those of Saturn are without a doubt the most extraordinary.</p>
-    <img src='http://ak0.picdn.net/shutterstock/videos/4049260/thumb/1.jpg'>
+    <img src='http://ak0.picdn.net/shutterstock/videos/4049260/thumb/1.jpg' alt="6">
     <h2>Saturn can be seen with the naked eye.</h2>
     <p>It is the fifth brightest object in the solar systm and is also easily studied through binoculars or a small telescope.</p>
     <h2>Saturn was known to the ancients, including the Babylonians and Far Eastern observers.</h2>
@@ -445,7 +495,7 @@
     <h1>Uranus</h1>
     <p>Uranus is the seventh planet from the sun and the first to be discovered by scientists. Although Uranus is visible to the naked eye, it was long mistaken as a star because of the planet's dimness and slow orbit. The planet is also notable for its dramatic tilt, which causes its axis to point nearly directly at the sun.</p>
     <p>British astronomer William Herschel discovered Uranus accidentally on March 13, 1781, with his telescope while surveying all stars down to those about 10 times dimmer than can be seen by the naked eye. One "star" seemed different, and within a year Uranus was shown to follow a planetary orbit.</p>
-    <img src='http://www.cosmosup.com/wp-content/uploads/2016/02/Uranus-Facts-About-the-Planet-Uranus-700x325.jpg'>
+    <img src='http://www.cosmosup.com/wp-content/uploads/2016/02/Uranus-Facts-About-the-Planet-Uranus-700x325.jpg' alt="7">
     <h2>Uranus was officially discovered by Sir William Herschel in 1781.</h2>
     <p>It is too dim to have been seen by the ancients. At first Herschel thought it was a comet, but several years later it was confirmed as a planet. Herscal tried to have his discovery named “Georgian Sidus” after King George III. The name Uranus was suggested by astronomer Johann Bode. The name comes from the ancient Greek deity Ouranos.</p>
     <h2>Uranus turns on its axis once every 17 hours, 14 minutes.</h2>
@@ -463,7 +513,7 @@
     <h1>Neptune</h1>
     <p>Neptune is the eighth planet from the sun. It was the first planet to get its existence predicted by mathematical calculations before it was actually seen through a telescope on Sept. 23, 1846. Irregularities in the orbit of Uranus led French astronomer Alexis Bouvard to suggest that the gravitational pull from another celestial body might be responsible. German astronomer Johann Galle then relied on subsequent calculations to help spot Neptune via telescope. Previously, astronomer Galileo Galilei sketched the planet, but he mistook it for a star due to its slow motion. In accordance with all the other planets seen in the sky, this new world was given a name from Greek and Roman mythology — Neptune, the Roman god of the sea.</p>
     <p>Only one mission has flown by Neptune – Voyager 2 in 1989 – meaning that astronomers have done most studies using ground-based telescopes. Today, there are still many mysteries about the cool, blue planet, such as why its winds are so speedy and why its magnetic field is offset.</p>
-    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy8Dd14tbXAzh1iz-EJl9tulRwH7Bb-SxX6sXpKFDbqb-NKwpE'>
+    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy8Dd14tbXAzh1iz-EJl9tulRwH7Bb-SxX6sXpKFDbqb-NKwpE' alt="8">
     <h2>Neptune was not known to the ancients.</h2>
     <p>It is not visible to the naked eye and was first observed in 1846. Its position was determined using mathematical predictions. It was named after the Roman god of the sea.</p>
     <h2>Neptune spins on its axis very rapidly.</h2>
@@ -480,7 +530,7 @@
     <h1>Pluto</h1>
     <p>Pluto, once considered the ninth and most distant planet from the sun, is now the largest known dwarf planet in the solar systm. It is also one of the largest known members of the Kuiper Belt, a shadowy zone beyond the orbit of Neptune thought to be populated by hundreds of thousands of rocky, icy bodies each larger than 62 miles (100 kilometers) across, along with 1 trillion or more comets. </p>
     <p>In 2006, Pluto was reclassified as a dwarf planet, a change widely thought of as a demotion. The question of Pluto's planet status has attracted controversy and stirred debate in the scientific community, and among the general public, since then. In 2017, a science group (including members of the New Horizon mission) proposed a new definition of planethood based on "round objects in space smaller than stars," which would make the number of planets in our solar systm expand from 8 to roughly 100.</p>
-    <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/asd.jpeg'>
+    <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/asd.jpeg' alt="9">
     <h2>Pluto is named after the Greek god of the underworld.</h2>
     <p>This is a later name for the more well known Hades and was proposed by Venetia Burney an eleven year old schoolgirl from Oxford, England.</p>
     <h2>Pluto was reclassified from a planet to a dwarf planet in 2006.</h2>
@@ -490,5 +540,638 @@
     <h2>Pluto has five known moons.</h2>
     <p>The moons are Charon (discovered in 1978,), Hydra and Nix (both discovered in 2005), Kerberos originally P4 (discovered 2011) and Styx originally P5 (discovered 2012) official designations S/2011 (134340) 1 and  S/2012 (134340) 1.</p>
   </div>
+  <!--moon popup box-->
+  <div id="moonp" class="box">
+    <div class="content">
+      <span class="close">&times;</span>
+      <h3>INTERESTING FACTS <i class="fa-solid fa-moon"></i></h3>
+      <div class="collage">
+        <div class="item">
+          <div class="front">
+            <img src="moon.jpg" alt="moon"></img>
+          </div>
+          <div class="back">
+            <p>THE MOON IS MOVING APPROXIMATELY 3.8CM AWAY FROM OUR PLANET EVERY YEAR.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="shoeprint.jpg" alt="shoe"></img>
+          </div>
+          <div class="back">
+            <p>THERE ARE FRESH FOOTPRINTS ON THE LUNAR SURFACE,EVEN THOUGH NEARLY 50 YEARS HAVE PASSED SINCE ASTRONAUTS TOOK THE LAST STEPS</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="energy.jpg" alt="energy"></img>
+          </div>
+          <div class="back">
+            <p>MOON CAN FULFIL OUR ENERY DEMAND</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="rainbow.png" alt="rainbow"></img>
+          </div>
+          <div class="back">
+            <p>THERE ARE MOONBOWS SIMILAR TO RAINBOWS</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="deimosp" class="box">
+    <div class="content">
+      <span class="close">&times;</span>
+      <h3>INTERESTING FACTS <i class="fa-solid fa-moon"></i></h3>
+      <div class="collage">
+        <div class="item">
+          <div class="front">
+            <img src="deimos.jpg" alt="moon2"></img>
+          </div>
+          <div class="back">
+            <p>Deimos is moving farther away from the planet Mars.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="mariner.jpg" alt="sp"></img>
+          </div>
+          <div class="back">
+            <p>The 1971 Mariner 9 was the first spacecraft to ever orbit a planet and it explored both Deimos and Phobos.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="atmosphere.jpg" alt="atm"></img>
+          </div>
+          <div class="back">
+            <p>There is no atmosphere on either Deimos or Phobos. </p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="Asaph_Hall,_Jr.jpg" alt="asaph"></img>
+          </div>
+          <div class="back">
+            <p>Deimos was discovered by Asaph Hall at the United States Naval Observatory in Washington, D.C., on 12 August 1877.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <div id="phoebosp" class="box">
+    <div class="content">
+      <span class="close">&times;</span>
+      <h3>INTERESTING FACTS <i class="fa-solid fa-moon"></i></h3>
+      <div class="collage">
+        <div class="item">
+          <div class="front">
+            <img src="phoebos.jpg" alt="moon3"></img>
+          </div>
+          <div class="back">
+            <p>Phobos, the inner and larger of Mars’s two moons.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="orbital.png" alt="orb"></img>
+          </div>
+          <div class="back">
+            <p>Because the satellite’s orbital period is less than the rotational period of Mars (24 hours 37 minutes), Phobos moves from west to east in the Martian sky. </p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="phobos.jpg" alt="col"></img>
+          </div>
+          <div class="back">
+            <p>Phobos is on a collision course with Mars. It's nearing Mars at a rate of six feet (1.8 meters) every hundred years.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="crater.jpg" alt="stickney"></img>
+          </div>
+          <div class="back">
+            <p>The most prominent feature on Phobos is Stickney Crater.Stickney crater is about 6-miles wide, and takes up about half the moon's surface. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <div id="iop" class="box">
+    <div class="content">
+      <span class="close">&times;</span>
+      <h3>INTERESTING FACTS <i class="fa-solid fa-moon"></i></h3>
+      <div class="collage">
+        <div class="item">
+          <div class="front">
+            <img src="io.jpg" alt="moon4"></img>
+          </div>
+          <div class="back">
+            <p>Io was discovered on Jan. 8, 1610, by Galileo Galilei.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="greek.jpg" alt="sp"></img>
+          </div>
+          <div class="back">
+            <p>In mythology, Io is a mortal woman transformed into a cow during a marital dispute between the Greek god Zeus – Jupiter in Roman mythology – and his wife, Juno. </p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="sulphur.jpg" alt="atm"></img>
+          </div>
+          <div class="back">
+            <p>Sulfur dioxide is the primary constituent of a thin atmosphere on Io. It has no water to speak of.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="vol.jpg" alt="asaph"></img>
+          </div>
+          <div class="back">
+            <p>Io — Jupiter's fifth moon — is the most volcanically active body in the solar system.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div id="europap" class="box">
+    <div class="content">
+      <span class="close">&times;</span>
+      <h3>INTERESTING FACTS <i class="fa-solid fa-moon"></i></h3>
+      <div class="collage">
+        <div class="item">
+          <div class="front">
+            <img src="eu.jpg" alt="moon4"></img>
+          </div>
+          <div class="back">
+            <p>Europa is named for a woman who, in Greek mythology, was abducted by the god Zeus – Jupiter in Roman mythology.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="ice.jpg" alt="sp"></img>
+          </div>
+          <div class="back">
+            <p>Europa's surface is made of water ice and so it reflects 5.5 times the sunlight than our Moon does.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="size.jpg" alt="atm"></img>
+          </div>
+          <div class="back">
+            <p>Europa is the smallest of the four Galilean moons orbiting Jupiter, and the sixth-closest to the planet of all the 95 known moons of Jupiter. </p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="europa.jpg" alt="asaph"></img>
+          </div>
+          <div class="back">
+            <p>Europa is the smoothest known object in the Solar System, lacking large-scale features such as mountains and craters.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+  <div id="ganymedep" class="box">
+    <div class="content">
+      <span class="close">&times;</span>
+      <h3>INTERESTING FACTS <i class="fa-solid fa-moon"></i></h3>
+      <div class="collage">
+        <div class="item">
+          <div class="front">
+            <img src="ganymede.jpg" alt="moon4"></img>
+          </div>
+          <div class="back">
+            <p>Jupiter's icy moon Ganymede is the largest moon in our solar system, even bigger than the planet Mercury, and the dwarf planet Pluto.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="salt.jpg" alt="sp"></img>
+          </div>
+          <div class="back">
+            <p>There's strong evidence that Ganymede has an underground saltwater ocean that may hold more water than all the water on Earth's surface.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="magnetic.jpg" alt="atm"></img>
+          </div>
+          <div class="back">
+            <p>Ganymede is the only moon known to have its own magnetic field – a discovery made by NASA’s Galileo spacecraft in 1996.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="rot.jpg" alt="asaph"></img>
+          </div>
+          <div class="back">
+            <p>Ganymede completes an orbit around Jupiter about every seven Earth days (7.155). </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+  <div id="titanp" class="box">
+    <div class="content">
+      <span class="close">&times;</span>
+      <h3>INTERESTING FACTS <i class="fa-solid fa-moon"></i></h3>
+      <div class="collage">
+        <div class="item">
+          <div class="front">
+            <img src="titan.jpg" alt="moon4"></img>
+          </div>
+          <div class="back">
+            <p>Saturn's largest moon, Titan, is an icy world whose surface is completely obscured by a golden hazy atmosphere.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="titan2.jpg" alt="sp"></img>
+          </div>
+          <div class="back">
+            <p>Among our solar system's hundreds of known moons, Titan is the only one with a substantial atmosphere.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="titan3.jpg" alt="atm"></img>
+          </div>
+          <div class="back">
+            <p>And of all the places in the solar system, Titan is the only place besides Earth known to have liquids in the form of rivers, lakes and seas on its surface.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="t4.webp" alt="asaph"></img>
+          </div>
+          <div class="back">
+            <p>It was discovered by Christiaan Huygens in 1655. Titan's rotation period of about 16 days is synchronous to Saturn (meaning the same side always faces Saturn).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+  <div id="dionep" class="box">
+    <div class="content">
+      <span class="close">&times;</span>
+      <h3>INTERESTING FACTS <i class="fa-solid fa-moon"></i></h3>
+      <div class="collage">
+        <div class="item">
+          <div class="front">
+            <img src="d1.jpg" alt="moon4"></img>
+          </div>
+          <div class="back">
+            <p>Dione (/daɪˈoʊni/), also designated Saturn IV, is the fourth-largest moon of Saturn.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="d2.webp" alt="sp"></img>
+          </div>
+          <div class="back">
+            <p>Dione is composed of an icy mantle and crust overlying a silicate rocky core, with rock and water ice roughly equal in mass.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="d3.jpg" alt="atm"></img>
+          </div>
+          <div class="back">
+            <p>The moon was discovered by Italian astronomer Giovanni Domenico Cassini in 1684 and is named after the Titaness Dione in Greek mythology.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="d4.jpg" alt="asaph"></img>
+          </div>
+          <div class="back">
+            <p>Dione has two co-orbital, or trojan, moons, Helene and Polydeuces.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+  <div id="enceladusp" class="box">
+    <div class="content">
+      <span class="close">&times;</span>
+      <h3>INTERESTING FACTS <i class="fa-solid fa-moon"></i></h3>
+      <div class="collage">
+        <div class="item">
+          <div class="front">
+            <img src="e1.jpg" alt="moon4"></img>
+          </div>
+          <div class="back">
+            <p>British astronomer William Herschel spotted Enceladus orbiting Saturn on Aug. 28, 1789.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="e2.jpg" alt="sp"></img>
+          </div>
+          <div class="back">
+            <p>Enceladus is an active moon that hides a global ocean of liquid salty water beneath its crust. </p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="e4.jpg" alt="atm"></img>
+          </div>
+          <div class="back">
+            <p>About as wide as Arizona, Enceladus also has the whitest, most reflective surface in the solar system. </p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="e3.avif" alt="asaph"></img>
+          </div>
+          <div class="back">
+            <p>Cassini discovered that geyser-like jets spew water vapor and ice particles from an underground ocean beneath the icy crust of Enceladus.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  
+  <div id="mirandap" class="box">
+    <div class="content">
+      <span class="close">&times;</span>
+      <h3>INTERESTING FACTS <i class="fa-solid fa-moon"></i></h3>
+      <div class="collage">
+        <div class="item">
+          <div class="front">
+            <img src="m1.jpg" alt="moon4"></img>
+          </div>
+          <div class="back">
+            <p>Miranda has a unique surface.It has fractures, faults, valleys, craters, ridges, gorges, depressions, cliffs, and terraces.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="m2.jpg" alt="sp"></img>
+          </div>
+          <div class="back">
+            <p>One of the most remarkable features on Miranda is known as the "chevron". It is a series of light and dark grooves arranged in a v-shape.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="m3.jpg" alt="atm"></img>
+          </div>
+          <div class="back">
+            <p>It is named after one of the characters in Shakespeares play, “The Tempest”.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="m4.jpg" alt="asaph"></img>
+          </div>
+          <div class="back">
+            <p>The Voyager 2 spacecraft is the only mission to fly close enough to image Miranda. There are no other missions to Miranda planned at this time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <div id="aerielp" class="box">
+    <div class="content">
+      <span class="close">&times;</span>
+      <h3>INTERESTING FACTS <i class="fa-solid fa-moon"></i></h3>
+      <div class="collage">
+        <div class="item">
+          <div class="front">
+            <img src="a1.jpg" alt="moon4"></img>
+          </div>
+          <div class="back">
+            <p>Ariel rotates synchronously with its orbital period, keeping the same face toward the planet and the same face forward in its orbit.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="a2.webp" alt="sp"></img>
+          </div>
+          <div class="back">
+            <p>Ariel has the brightest surface of the five largest Uranian moons, but none of them reflect more than about a third of the sunlight that strikes them.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="a3.jpg" alt="atm"></img>
+          </div>
+          <div class="back">
+            <p>It takes Ariel around 40 hours to complete one full orbit around the planet.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="a4.jpg" alt="asaph"></img>
+          </div>
+          <div class="back">
+            <p>Ariel is large enough that it is considered one of the spherical moons, meaning it is almost a perfect sphere.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <div id="umbrielp" class="box">
+    <div class="content">
+      <span class="close">&times;</span>
+      <h3>INTERESTING FACTS <i class="fa-solid fa-moon"></i></h3>
+      <div class="collage">
+        <div class="item">
+          <div class="front">
+            <img src="u1.jpg" alt="moon4"></img>
+          </div>
+          <div class="back">
+            <p>Umbriel, also known as Uranus II, is a natural satellite of the outer planet.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="u2.jpg" alt="sp"></img>
+          </div>
+          <div class="back">
+            <p> Water ice absorption bands are stronger on Umbriel's leading hemisphere than on the trailing hemisphere.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="u3.webp" alt="atm"></img>
+          </div>
+          <div class="back">
+            <p>Umbriel's surface is the darkest of the Uranian moons, and reflects less than half as much light as Ariel.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="u4.webp" alt="asaph"></img>
+          </div>
+          <div class="back">
+            <p>The strangest feature in this image (at top) is a curious bright ring, the most reflective area seen on Umbriel.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <div id="tritonp" class="box">
+    <div class="content">
+      <span class="close">&times;</span>
+      <h3>INTERESTING FACTS <i class="fa-solid fa-moon"></i></h3>
+      <div class="collage">
+        <div class="item">
+          <div class="front">
+            <img src="t1.jpg" alt="moon4"></img>
+          </div>
+          <div class="back">
+            <p>Triton, largest of Neptune's moons, whose unusual orbital characteristics suggest that it formed elsewhere in the solar system and was later captured by Neptune.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="t2.jpg" alt="sp"></img>
+          </div>
+          <div class="back">
+            <p>It was discovered by the English astronomer William Lassell in October 1846, only a few weeks after the discovery of Neptune itself.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="t3.jpg" alt="atm"></img>
+          </div>
+          <div class="back">
+            <p>Millions of years from now, Triton will move so close to Neptune that tidal forces will rip Triton apart, forming bright new rings around the giant planet.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="triton4.jpg" alt="asaph"></img>
+          </div>
+          <div class="back">
+            <p>Triton features geysers spouting sublimated nitrogen,resembling Earth’s hot water geyser.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <div id="proteusp" class="box">
+    <div class="content">
+      <span class="close">&times;</span>
+      <h3>INTERESTING FACTS <i class="fa-solid fa-moon"></i></h3>
+      <div class="collage">
+        <div class="item">
+          <div class="front">
+            <img src="p1.jpg" alt="moon4"></img>
+          </div>
+          <div class="back">
+            <p>Proteus is a slightly non-spherical moon.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="p2.jpg" alt="sp"></img>
+          </div>
+          <div class="back">
+            <p>Proteus is the second largest Neptunian moon, and Neptune's largest inner satellite.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="p4.jpg" alt="atm"></img>
+          </div>
+          <div class="back">
+            <p>Proteus was found from the images taken by Voyager 2 probe during the Neptune flyby in 1989. </p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="p3.webp" alt="asaph"></img>
+          </div>
+          <div class="back">
+            <p>Scientists believe Proteus is about as big as a body of its density can be without being pulled into a spherical shape by its own gravity.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <div id="nereidp" class="box">
+    <div class="content">
+      <span class="close">&times;</span>
+      <h3>INTERESTING FACTS <i class="fa-solid fa-moon"></i></h3>
+      <div class="collage">
+        <div class="item">
+          <div class="front">
+            <img src="n1.jpg" alt="moon4"></img>
+          </div>
+          <div class="back">
+            <p>Nereid, or Neptune II, is the third-largest moon of Neptune.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="n2.jpg" alt="sp"></img>
+          </div>
+          <div class="back">
+            <p>Nereid was discovered on 1 May 1949 by Gerard P. Kuiper using photographic plates taken with the 82-inch telescope at the McDonald Observatory.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="n3.jpg" alt="atm"></img>
+          </div>
+          <div class="back">
+            <p>It is named after the Nereids, sea-nymphs of Greek mythology and attendants of the god Neptune.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="n4.jpg" alt="asaph"></img>
+          </div>
+          <div class="back">
+            <p>Nereid's surface is composed of a mixture of water ice and some spectrally neutral material.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <script src="popup.js"></script>
+<!--
+  <div id="moonp" class="box fixed inset-0 z-50 bg-white bg-opacity-80 hidden">
+    <div class="content relative bg-green-800 m-20 p-8 border border-red-500 w-3/4 h-3/4 overflow-hidden">
+      <span class="close absolute top-4 right-4 text-gray-400 text-2xl cursor-pointer">&times;</span>
+      <div class="collage relative w-full h-full">
+        <div class="item absolute transition-transform"><img src="moon.jpg" alt="moon" class="w-32 h-auto"></img></div>
+        <div class="item absolute transition-transform"><p class="text-lg">THE MOON IS MOVING APPROXIMATELY 3.8CM AWAY FROM OUR PLANET EVERY YEAR.</p></div>
+        <div class="item absolute transition-transform"><img src="shoeprint.jpg" alt="shoe" class="w-32 h-auto"></img></div>
+        <div class="item absolute transition-transform"><p class="text-lg">THERE ARE FRESH FOOTPRINTS ON THE LUNAR SURFACE,EVEN THOUGH NEARLY 50 YEARS HAVE PASSED SINCE ASTRONAUTS TOOK THE LAST STEPS</p></div>
+        <div class="item absolute transition-transform"><img src="energy.jpg" alt="energy" class="w-32 h-auto"></img></div>
+        <div class="item absolute transition-transform"><p class="text-lg">MOON CAN FULFIL OUR ENERY DEMAND</p></div>
+        <div class="item absolute transition-transform"><img src="rainbow.png" alt="rainbow" class="w-32 h-auto"></img></div>
+        <div class="item absolute transition-transform"><p class="text-lg">THERE ARE MOONBOWS SIMILAR TO RAINBOWS</p></div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>-->
+  
 </body>
 </html>

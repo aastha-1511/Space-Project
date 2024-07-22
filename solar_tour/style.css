@@ -2,6 +2,7 @@
 Jamie Coulter
  */
 
+
  @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700");
  .solar_systm {
    transform-style: preserve-3d;
@@ -45,11 +46,11 @@ Jamie Coulter
    width: 1200px;
    border-radius: 600px;
    background: red;
-   transition: transform 2.8s 0.23s cubic-bezier(0.33, 0, 0, 1), opacity 2s 0.8s, box-shadow 0s 0s;
+   transition: transform 2.8s 0.2s cubic-bezier(0.33, 0, 0, 1) ;
    background-size: 1140px 910px !important;
    top: auto;
    bottom: -920px;
- }
+}
  body .solar_systm .planet .moon {
    height: 200px;
    width: 200px;
@@ -57,19 +58,102 @@ Jamie Coulter
    background: red;
    position: absolute;
    text-align: center;
-   color: white;
+   color: rgb(242, 231, 231);
    text-transform: uppercase;
    opacity: 0;
    transition: all 0.6s 0.2s;
  }
+ 
  body .solar_systm .planet .moon h2 {
-   font-weight: 100;
+   font-weight: 450;
    font-size: 40px;
    letter-spacing: 5px;
    margin: 0;
    position: relative;
    top: -120px;
  }
+
+body .solar_systm .planet .moon .popup {
+  color: white;
+  font-size: 30px;
+  font-weight: 100;
+  letter-spacing: 5px;
+  margin: 0;
+  position: absolute;
+  padding: 0 2px 5px 0px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s; /* Smooth transition */
+}
+
+body .solar_systm .planet .moon:hover .popup {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+  cursor: pointer;
+}
+
+body .solar_systm .planet.earth .moon .popup {
+  top: 30%;
+  left: 250px;
+}
+body .solar_systm .planet.mars .deimos .popup {
+  top: 30%;
+  left: 250px;
+}
+
+body .solar_systm .planet.mars .phoebos .popup {
+  top: 30%;
+  left: 250px;
+}
+
+body .solar_systm .planet.jupiter .lo .popup {
+  top: 30%;
+  left: 250px;
+}
+body .solar_systm .planet.jupiter .europa .popup {
+  top: 30%;
+  left: 250px;
+}
+body .solar_systm .planet.jupiter .ganymede .popup {
+  top: 30%;
+  left: 250px;
+}
+body .solar_systm .planet.saturn .enceladus .popup {
+  top: 30%;
+  left: 250px;
+}
+body .solar_systm .planet.saturn .titan .popup {
+  top: 30%;
+  left: 250px;
+}
+body .solar_systm .planet.saturn .dione .popup {
+  top: 30%;
+  left: 250px;
+}
+body .solar_systm .planet.uranus .miranda .popup {
+  top: 30%;
+  left: 250px;
+}body .solar_systm .planet.uranus .ariel .popup {
+  top: 30%;
+  left: 250px;
+}body .solar_systm .planet.uranus .umbriel .popup {
+  top: 30%;
+  left: 250px;
+}
+body .solar_systm .planet.neptune .triton .popup {
+  top: 30%;
+  left: 250px;
+}
+body .solar_systm .planet.neptune .proteus .popup {
+  top: 30%;
+  left: 250px;
+}
+body .solar_systm .planet.neptune .nereid .popup {
+  top: 30%;
+  left: 250px;
+}
+
  body .solar_systm .planet .moon h3 {
    font-weight: 100;
    font-size: 20px;
@@ -91,11 +175,12 @@ Jamie Coulter
  body .solar {
    position: absolute;
    transform: rotatex(-20deg);
-   perspective: 800px;
+   perspective: 800px; /*distance between 2 planets*/
    width: 100%;
    height: 100%;
    transform-style: preserve-3d;
- }
+   
+}
  
  body input[type=radio][name=planet]::after {
    width: 220px;
@@ -110,10 +195,10 @@ Jamie Coulter
  }
  
  body {
-   overflow: hidden;
-   background: black;
-   height: 100vh;
-   font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+  background: black;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
  }
  body .logo {
    color: white;
@@ -1816,7 +1901,7 @@ Jamie Coulter
    transition: all 0.5s 0s;
  }
  body .solar_systm .planet .trajectory {
-   transition: all 0.6s 0s;
+   transition: all 0.6s 0s; 
    opacity: 0;
  }
  body .solar_systm .planet.mercury {
@@ -1837,17 +1922,20 @@ Jamie Coulter
    left: -150px;
    top: -110px;
  }
+ 
  body .solar_systm .planet.earth .moon {
    left: 800px;
    top: -160px;
    transform: scale(0.45);
    background: url("https://img2.cgtrader.com/items/702173/682fad2a11/92k-moon-color-map-3d-model.jpg");
-   z-index: -1;
+   z-index: 1;
    box-shadow: 0px -30px 30px 10px black inset;
  }
+ 
  body .solar_systm .planet.earth .moon h3 {
    color: #26daaa;
  }
+
  body .solar_systm .planet.mars {
    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/mars_texture.jpg");
    box-shadow: 0 -590px 150px black inset, 0 0px 130px 40px #e86363 inset, 0 0px 23px 4px #e86363 inset, 0 -10px 130px #6b261a;
@@ -1860,9 +1948,10 @@ Jamie Coulter
    top: -100px;
    transform: scale(0.45);
    background: url("https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA07782_hires.jpg");
-   z-index: -1;
+   z-index: 1;
    box-shadow: 0px -30px 30px 10px black inset;
  }
+
  body .solar_systm .planet.mars .trajectory.d {
    width: 1770px;
    height: 1770px;
@@ -1880,7 +1969,7 @@ Jamie Coulter
    top: -160px;
    transform: scale(0.5);
    background: url("https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA07782_hires.jpg");
-   z-index: -1;
+   z-index: 1;
    box-shadow: 0px -30px 30px 10px black inset;
  }
  body .solar_systm .planet.jupiter {
@@ -1913,7 +2002,7 @@ Jamie Coulter
    top: -100px;
    transform: scale(0.4);
    background: url("http://stevealbers.net/albers/sos/jupiter/io/io_rgb_cyl.jpg");
-   z-index: -1;
+   z-index: 1;
    box-shadow: 0px -30px 30px 10px black inset;
  }
  body .solar_systm .planet.jupiter .europa {
@@ -1921,7 +2010,7 @@ Jamie Coulter
    top: -210px;
    transform: scale(0.45);
    background: url("http://i.imgur.com/ZZBiHOH.jpg");
-   z-index: -1;
+   z-index: 1;
    box-shadow: 0px -30px 30px 10px black inset;
  }
  body .solar_systm .planet.jupiter .ganymede {
@@ -1929,7 +2018,7 @@ Jamie Coulter
    top: -70px;
    transform: scale(0.4);
    background: url("https://vignette.wikia.nocookie.net/planet-texture-maps/images/1/14/Ganymede.jpg/revision/latest?cb=20180104001948");
-   z-index: -1;
+   z-index: 1;
    box-shadow: 0px -30px 30px 10px black inset;
  }
  body .solar_systm .planet.saturn {
@@ -1962,7 +2051,7 @@ Jamie Coulter
    top: -100px;
    transform: scale(0.4);
    background: url("https://pre00.deviantart.net/bea3/th/pre/i/2017/057/7/f/titan_texture_map_8k_by_fargetanik-db0f8m0.png");
-   z-index: -1;
+   z-index: 1;
    box-shadow: 0px -30px 30px 10px black inset;
  }
  body .solar_systm .planet.saturn .dione {
@@ -1970,7 +2059,7 @@ Jamie Coulter
    top: -210px;
    transform: scale(0.45);
    background: url("https://www.jpl.nasa.gov/spaceimages/images/wallpaper/PIA12577-640x350.jpg");
-   z-index: -1;
+   z-index: 1;
    box-shadow: 0px -30px 30px 10px black inset;
  }
  body .solar_systm .planet.saturn .enceladus {
@@ -1978,7 +2067,7 @@ Jamie Coulter
    top: -70px;
    transform: scale(0.4);
    background: url("https://img.purch.com/w/660/aHR0cDovL3d3dy5zcGFjZS5jb20vaW1hZ2VzL2kvMDAwLzA0NC8yMzkvb3JpZ2luYWwvZW5jZWxhZHVzLW1hcC1jYXNzaW5pLmpwZw==");
-   z-index: -1;
+   z-index: 1;
    box-shadow: 0px -30px 30px 10px black inset;
  }
  body .solar_systm .planet.uranus {
@@ -2011,7 +2100,7 @@ Jamie Coulter
    top: -100px;
    transform: scale(0.4);
    background: url("http://celestia.simulatorlabbs.com/CelSL/textures/medres/miranda.jpg");
-   z-index: -1;
+   z-index: 1;
    box-shadow: 0px -30px 30px 10px black inset;
  }
  body .solar_systm .planet.uranus .ariel {
@@ -2019,7 +2108,7 @@ Jamie Coulter
    top: -210px;
    transform: scale(0.45);
    background: url("http://celestia.freedoors.org/Celestia-Doors/textures/medres/ariel.jpg");
-   z-index: -1;
+   z-index: 1;
    box-shadow: 0px -30px 30px 10px black inset;
  }
  body .solar_systm .planet.uranus .umbriel {
@@ -2027,7 +2116,7 @@ Jamie Coulter
    top: -70px;
    transform: scale(0.4);
    background: url("http://celestia.freedoors.org/Celestia-Doors/textures/medres/titania.jpg");
-   z-index: -1;
+   z-index: 1;
    box-shadow: 0px -30px 30px 10px black inset;
  }
  body .solar_systm .planet.neptune {
@@ -2060,7 +2149,7 @@ Jamie Coulter
    top: -100px;
    transform: scale(0.4);
    background: url("https://img00.deviantart.net/b934/i/2016/198/b/0/triton_texture_map_14k_by_fargetanik-daac9tm.png");
-   z-index: -1;
+   z-index: 1;
    box-shadow: 0px -30px 30px 10px black inset;
  }
  body .solar_systm .planet.neptune .proteus {
@@ -2068,7 +2157,7 @@ Jamie Coulter
    top: -210px;
    transform: scale(0.45);
    background: url("http://2.bp.blogspot.com/-NrsDNbSk8TU/VKmLHdOgw0I/AAAAAAAAHvY/dod1Kqv2Ta8/s1600/NereidTxt2.jpg");
-   z-index: -1;
+   z-index: 1;
    box-shadow: 0px -30px 30px 10px black inset;
  }
  body .solar_systm .planet.neptune .nereid {
@@ -2076,7 +2165,7 @@ Jamie Coulter
    top: -70px;
    transform: scale(0.4);
    background: url("http://4.bp.blogspot.com/-3eyaVs4az74/VKmMpLo6FYI/AAAAAAAAHvs/zK5NTllQYnk/s1600/NereidTxt.jpg");
-   z-index: -1;
+   z-index: 1;
    box-shadow: 0px -30px 30px 10px black inset;
  }
  body .solar_systm .planet.pluto {
@@ -2175,7 +2264,7 @@ Jamie Coulter
  body .solar_systm .planet_description p {
    line-height: 26px;
    margin-top: 14px;
-   oapcity: 0.9;
+   opacity: 0.9;
    margin-bottom: 10px;
  }
  body .solar_systm .planet_description a {
@@ -2216,7 +2305,7 @@ Jamie Coulter
  }
  body .panel body::-webkit-scrollbar-thumb {
    background-color: darkgrey;
-   outline: 1px solid slategrey;
+   outline: 1px solid rgb(70, 141, 211);
  }
  body .panel .profile {
    padding-top: 4px;
@@ -2260,7 +2349,7 @@ Jamie Coulter
  body .panel h2::after {
    width: 30px;
    height: 2px;
-   background: black;
+   background: rgb(4, 4, 4);
    display: block;
    content: "";
    margin-top: 8px;
@@ -2270,3 +2359,135 @@ Jamie Coulter
    font-size: 12px;
    line-height: 20px;
  }
+
+
+ 
+/* Popup background styling */
+.box {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Transparent background */
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Popup content styling */
+.box .content {
+  background: rgba(255, 255, 255, 0.475); /* Slightly transparent white background */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.413);
+  width: 90%;
+  height: 60%;
+  max-width: 800px;
+  box-sizing: border-box;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 0;
+  transform: scale(0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Close button styling */
+.box .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 27px;
+  cursor: pointer;
+}
+.box .close:hover{
+  font-size:30px ;
+  font-weight:bolder;
+}
+
+/* Group styling for collage items */
+.box .collage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Add space between items */
+  justify-content: center;
+}
+
+/* Individual item styling */
+.box .collage .item {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  width: 160px; /* Fixed width */
+  height: 300px; /* Fixed height */
+  box-sizing: border-box;
+  text-align: center; /* Center text inside items */
+  perspective: 1000px; /* Add perspective for 3D effect */
+  position: relative;
+}
+
+.box .collage .item .front,
+.box .collage .item .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: transform 0.6s ease-in-out;
+}
+
+.box .collage .item .front {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.box .collage .item .back {
+  background: rgba(255, 255, 255, 0.9);
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box .collage .item img {
+  max-width: 100%;
+  height: 260px;
+  border-radius: 10px;
+}
+
+.box .collage .item:hover .front {
+  transform: rotateY(180deg);
+}
+
+.box .collage .item:hover .back {
+  transform: rotateY(0deg);
+  
+}
+#moonp .content{
+  background-color: #8cbaffbe;
+}
+#phoebosp .content, #deimosp .content{
+  background-color: #6b261ab8;
+}
+
+#iop .content, #europap .content, #ganymedep .content{
+  background-color: rgba(226, 226, 99, 0.849);
+}
+
+
+#dionep .content, #titanp .content, #enceladusp .content{
+  background-color: rgba(226, 188, 99, 0.849);
+}
+
+#aerielp .content, #umbrielp .content, #mirandap .content{
+  background-color: rgba(99, 209, 226, 0.849);
+}
+
+
+#tritonp .content, #proteusp .content, #nereidp .content{
+  background-color: rgba(52, 81, 248, 0.849);
+}
