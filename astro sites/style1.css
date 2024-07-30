@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     background-size: cover;
     overflow: hidden;
 }
@@ -13,44 +13,41 @@ body{
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
-    width:1410px;
-    height:680px;
-    background: #d0d8f3;
+    width:100%;
+    max-width: 1410px;
+    min-height: 700px;
+    background: #000000;
     box-shadow:0 30px 50px grey;
+    overflow: hidden;
 }
 
-.container .slide .item{
+.slide {
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    display: flex;
+    flex-wrap: nowrap; 
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+.slide .item{
     width:200px;
     height:300px;
     flex-shrink: 0;
     position:absolute;
     top:50%;
-    transform:translate(0,-50%);
+    margin:10px;
+    /*transform:translate(0,-50%);*/
+    transform: translateY(-50%);
     border-radius:20px;
     box-shadow:0 30px 50px #7f6f6f;
     background-position:50% 50%;
     background-size:cover;
     display:inline-block;
     transition:0.5s;
-   
-}
-.slide .item {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(0, 0);
-    border-radius: 20px;
-    box-shadow: 0 30px 50px #7f6f6f;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: none;
 }
 
-.slide .item:nth-child(1)/*,
-.slide .item:nth-child(2)*/{
+.slide .item:nth-child(1){
     top:0;
     left:0;
     transform:translate(0,0);
@@ -68,7 +65,7 @@ body{
 .slide .item:nth-child(4){
     left:calc(50% + 440px);
 }
-/*n=0,1,2,3,4,5,6.....*/
+
 .slide .item:nth-child(n+5){
     left:calc(50% + 660px);
     opacity:0;
@@ -83,6 +80,7 @@ body{
     transform:translate(0,-50%);
     font-family:system-ui;
     display:none;
+   
 }
 .slide .item:nth-child(1) .content{
     display: block;
@@ -118,8 +116,93 @@ body{
     transition: background-color 0.3s;
 }
 .content .click:hover{
-    background-color: aquamarine;
+    background-color: #2433a2;
 }
+
+@media screen and (max-width: 1080px) {
+    .slide {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .slide .item {
+        width: calc(50% - 200px);  /* 3 items per row */
+        height: 200px;
+        margin: 10px;
+        transform: none;
+    }
+    .content .name {
+        font-size: 18px;
+    }
+    .content .info {
+        font-size: 14px;
+    }
+    .content .click {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slide {
+        flex-wrap: wrap;
+        justify-content:center;
+        align-items:center;
+        
+    }
+    .slide .item {
+        width: calc(55% - 10px);
+        /*2itemsperrow*/
+        height: 200px;
+        margin:0px;
+        top:60%;
+        transform: translate(-40%,0);
+        overflow-y: auto;
+}
+    .item .content{
+       top: 35%;
+       width: 350px;
+       left:20px;
+    }
+    .content .name {
+        font-size: 16px;
+    }
+    .content .info {
+        font-size: 15px;
+    }
+    .content .click {
+        font-size: 10px;
+    }
+    
+}
+
+@media screen and (max-width: 300px) {
+    .container {
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: auto;
+    }
+    .slide {
+        flex-direction: column;
+        min-height: auto;
+    }
+    .slide .item {
+        width: 50%;
+        height: 20px;
+        margin: 90px 0;
+        transform: none;
+    }
+    .content .name {
+        font-size: 13px;
+    }
+    .content .info {
+        font-size: 12px;
+    }
+    .content .click {
+        font-size: 10px;
+    }
+}
+
 
 @keyframes animate{
     from{
@@ -133,14 +216,7 @@ body{
         filter:blur(0);
 }
 }
-@media screen and (max-width: 1080px){
-    .container .slide .item .content{
-        padding-right:10px;
-    }
-    .container .slide .item .content .name{
-        font-size:20px;
-    }
-}
+
 .button{
     width:100%;
     text-align: center;
@@ -176,6 +252,7 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     transition: opacity 0.3s ease;
+
 }
 .static-image{
     opacity: 1;
