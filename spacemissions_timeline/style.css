@@ -2,14 +2,14 @@
 
 body {
     font-family: "Montserrat" , serif;
-    background-color: #4c4177;
+    background-color: black;
     /* background-image: url('C:/Users/Hetvi Shah/OneDrive/Pictures/Screenshots 1/2024-07-02.png');*/
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%);
+    /*background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%);*/
     height: 100vh;
-    color: white;
+    color:black;
     padding:0;
 }
 
@@ -24,7 +24,7 @@ h1 {
 }
 .timeline {
     position: relative;
-    width: 900px;
+    width: 90%;
     margin: 0 auto;
     padding: 2rem;
     padding-bottom: 400px;
@@ -41,7 +41,7 @@ h1 {
     left: 50%;
     margin:0 auto;
     z-index: 2;
-    height: 2000px;
+    height: 2500px;
 }
 
 .line::after,
@@ -59,6 +59,27 @@ h1 {
 
 .line::after{
     bottom: 0;
+}
+
+.img1, .img2, .img3{
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.img1{
+    background-image: url(img1.avif);
+}
+
+.img2{
+    background-image: url(img2.avif);
+}
+
+.img3{
+    background-image: url(img3.jpg);
 }
 
 .timeline-item {
@@ -80,11 +101,11 @@ h1 {
     z-index: 1;
 }
 
-.timeline-item:nth-child(odd) {
+.timeline-item:nth-child(even) {
     left: 0;
 }
 
-.timeline-item:nth-child(even) {
+.timeline-item:nth-child(odd) {
     left: 50%;
 }
 
@@ -117,12 +138,13 @@ h1 {
     padding: 20px;
     /*background-color: white;*/
     color: aliceblue;
+    text-shadow: 0 0 5px #080000, 0 0 5px #010111;
     position: relative;
     border-radius: 6px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.timeline-item:nth-child(even) .timeline-date {
+.timeline-item:nth-child(odd) .timeline-date {
     left: auto;
     right: 100%;
     transform: translateX(50%);
