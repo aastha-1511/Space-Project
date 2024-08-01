@@ -4,20 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Space Wonders</title>
+  <link rel="stylesheet" href="jarallax.css">
+  <link rel="stylesheet" href="s.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap');
 
-    body, html {
+    /*body, html {
       margin: 0;
       padding: 0;
       width: 100%;
-      height: 100vh; /* Single viewport height */
+      height: 100vh; /* Single viewport height 
       font-family: "Truculenta", sans-serif;
       background: black;
-      overflow: hidden;
+      overflow: auto;
     }
 
-    section {
+    .welcome-bg {
       width: 100%;
       height: 100vh;
       position: relative;
@@ -84,7 +88,7 @@
       background: url("534-5340173_astronaut-space-cartoon-clipart.png") no-repeat center center;
       background-size: contain;
       z-index: 2;
-      top: 20%; /* Adjusted to ensure it moves above the text */
+      top: 20%; /* Adjusted to ensure it moves above the text 
       animation: zigzag 10s linear infinite;
     }
 
@@ -137,7 +141,7 @@
       position: relative;
     }
 
-    .welcome-bg::before {
+  .welcome-bg::before {
       content: '';
       position: absolute;
       top: 0;
@@ -148,18 +152,20 @@
       background-size: cover;
       opacity: 0.3;
       z-index: 0;
-    }
+    }*/
   </style>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="#welcome">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>
-  </nav>
+  <div class="navBar">
+    <nav>
+      <ul>
+        <li><a href="#welcome">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </div>
 
   <section id="welcome" class="welcome-bg">
     <div class="stars"></div>
@@ -169,5 +175,131 @@
     </div>
     <div class="astronaut"></div>
   </section>
+
+  <section class="section2" id="sec-2">
+    <div class="stars"></div>
+    <div class="box">
+        <h2 data-jarallax-element="0 -300">ASTRONOMICAL LINKS</h2>
+        <div class="contain">
+            <div class="imgb jarallax">
+                <img src="a1.png" alt="int1" class="jarallax-img">
+            </div>
+            <div class="about" data-jarallax-element="-250 0">
+                <p> Welcome to our curated collection of astronomical resources, where we've gathered a 
+                    comprehensive list of the most informative and fascinating websites dedicated to the wonders of the universe.
+                    Whether you're an amateur stargazer or a seasoned astronomer, you'll find valuable information and engaging content that will deepen your understanding and appreciation of the cosmos.
+                    Each link is carefully selected to ensure high-quality, reliable, and up-to-date information, making this your go-to resource for all things astronomical.</p>
+                <button type="button" class="flex items-center rounded-lg border-2 border-black p-1 ml-[115px] mt-2 bg-gray-300 text-black font-semibold">Learn More</button>
+            </div>
+        </div>
+    </div>
+</section> 
+<section class="section2" id="sec-3">
+  <div class="stars"></div>
+    <div class="box">
+        <h2 data-jarallax-element="0 300">SPACE INVADERS</h2>
+        <div class="contain">
+            <div class="imgb jarallax">
+                <img src="a3.jpg" alt="int2" class="jarallax-img">
+            </div>
+            <div class="about" data-jarallax-element="-250 0">
+                <p> Welcome to our interactive gaming page, featuring the classic arcade game, Space Invader! Relive the nostalgia of the golden age of video games with
+                    this timeless shooter where you defend the Earth from waves of alien invaders. The game is seamlessly integrated into our webpage, providing a smooth and engaging experience
+                    whether you're playing on a desktop or mobile device.Happy playing, and may the best invader conqueror win! </p>
+                <button type="button" class="flex items-center rounded-lg border-2 border-black p-1 ml-[115px] mt-2 bg-gray-300 text-black font-semibold">Learn More</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section2" id="sec-4">
+  <div class="stars"></div>
+    <div class="box">
+        <h2 data-jarallax-element="0 -300">TIMELINE</h2>
+        <div class="contain">
+            <div class="imgb jarallax">
+                <img src="a4.jpg" alt="int3" class="jarallax-img">
+            </div>
+            <div class="about" data-jarallax-element="-250 0">
+                <p> Our comprehensive timeline of space missions offers an immersive journey through the history of humanity's exploration of the cosmos. 
+                    This webpage meticulously chronicles key milestones in space exploration, from the early days of the Space Race to the latest interplanetary missions.
+                    With an intuitive and visually appealing layout, you can easily navigate through decades of space history.
+                    Whether you're a space enthusiast, student, or researcher, this timeline offers a rich and educational experience, highlighting the incredible progress we've made in our quest to explore the final frontier.</p>
+                <button type="button" class="flex items-center rounded-lg border-2 border-black p-1 ml-[115px] mt-2 bg-gray-300 text-black font-semibold">Learn More</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section2" id="sec-5">
+  <div class="stars"></div>
+    <div class="box">
+        <h2 data-jarallax-element="0 300">SPACE TOUR</h2>
+        <div class="contain">
+            <div class="imgb jarallax">
+                <img src="a5.jpg!w700wp" alt="int4" class="jarallax-img">
+            </div>
+            <div class="about" data-jarallax-element="-250 0">
+                <p> Explore the wonders of the universe with our interactive Space Tour webpage. This immersive experience takes you on a virtual journey through the cosmos, 
+                    allowing you to visit stunning celestial destinations from the comfort of your home.Navigate through beautifully rendered 3D models of planets, moons, stars, and galaxies,
+                    accompanied by detailed descriptions and fascinating facts.Perfect for students, space enthusiasts, and curious minds, this webpage brings the marvels of space exploration
+                    to your fingertips, inspiring a deeper appreciation for the vast and mysterious universe we inhabit.
+                    </p>
+                <button type="button" class="flex items-center rounded-lg border-2 border-black p-1 ml-[115px] mt-2 bg-gray-300 text-black font-semibold">Learn More</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section2" id="sec-6">
+  <div class="stars"></div>
+    <div class="box">
+        <h2 data-jarallax-element="0 -300">SPACE TECHNOLOGY</h2>
+        <div class="contain">
+            <div class="imgb jarallax">
+                <img src="a1.jpg" alt="int5" class="jarallax-img">
+            </div>
+            <div class="about" data-jarallax-element="-250 0">
+                <p> Our Space Technology webpage delves into the cutting-edge advancements and innovations driving modern space exploration.
+                    Here, you'll find comprehensive information about the latest spacecraft, satellites, rovers, and other groundbreaking technologies that are expanding our reach into the cosmos.</p>
+                <button type="button" class="flex items-center rounded-lg border-2 border-black p-1 ml-[115px] mt-2 bg-gray-300 text-black font-semibold">Learn More</button>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="content">
+  <!-- Your main content here -->
+</div>
+<footer>
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="52b49ab47ba026d0e01eb3346c0e029a.png" alt="Space Logo">
+    </div>
+    <div class="footer-nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skydiary">Sky Diary</a></li>
+        <li><a href="#merchandise">Merchandise</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <a href="#">f<i class="fab fa-facebook-f"></i></a>
+      <a href="#">t<i class="fab fa-twitter"></i></a>
+      <a href="#">i<i class="fab fa-instagram"></i></a>
+      <a href="#">l<i class="fab fa-linkedin-in"></i></a>
+    </div>
+    <div class="footer-info">
+      <p>&copy; 2024 Space Website. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="jarallax.js"></script>
+<script src="jarallax-element.js"></script>
+<script type="text/javascript">
+    jarallax(document.querySelectorAll('.jarallax'), {
+        speed: 0.2,
+    });
+    jarallax(document.querySelectorAll('[data-jarallax-element]'),{
+        speed:0.2,
+    });
+</script>
 </body>
 </html>
