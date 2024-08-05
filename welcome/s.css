@@ -252,7 +252,7 @@ section .contain .about {
     margin-top: 200px;
     margin-bottom: 40px;
     padding: 40px;
-    background: #4db1f3;
+    background: rgb(58, 56, 56);
     z-index: 1;
     max-width: 400px;
     color: #fff;
