@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Industry Facts</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("bg2.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        #fact {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            background-color: #e6c403;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-shadow: 0 0 2px black,0 0 2px black; 
+        }
+
+        button:hover {
+            background-color: #8c7704;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Space Industry Facts</h1>
+        <p id="fact"></p>
+        <div class="button-container">
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+        </div>
+    </div>
+
+    <script>
+        const facts = [
+            "SpaceX's Falcon Heavy is currently the most powerful operational rocket in the world.",
+            "The global space economy was valued at $447 billion in 2020.",
+            "There are over 3,000 active satellites orbiting Earth as of 2021.",
+            "The International Space Station (ISS) has been continuously occupied since November 2000.",
+            "NASA's Artemis program aims to land the first woman and next man on the Moon by 2024.",
+            "The space tourism industry is expected to reach $3 billion by 2030.",
+            "Satellite internet constellations like Starlink aim to provide global broadband coverage.",
+            "The James Webb Space Telescope, launched in 2021, is the largest and most powerful space telescope ever built.",
+            "3D printing technology is being developed for use in space exploration and colonization.",
+            "The space debris problem is becoming increasingly critical, with over 128 million pieces of debris orbiting Earth."
+        ];
+
+        let currentFactIndex = 0;
+        const factElement = document.getElementById('fact');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+
+        function displayFact() {
+            factElement.textContent = facts[currentFactIndex];
+        }
+
+        function nextFact() {
+            currentFactIndex = (currentFactIndex + 1) % facts.length;
+            displayFact();
+        }
+
+        function prevFact() {
+            currentFactIndex = (currentFactIndex - 1 + facts.length) % facts.length;
+            displayFact();
+        }
+
+        nextButton.addEventListener('click', nextFact);
+        prevButton.addEventListener('click', prevFact);
+
+        // Initialize with the first fact
+        displayFact();
+
+        // Add touch swipe functionality
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchStartX - touchEndX > 50) {
+                nextFact();
+            } else if (touchEndX - touchStartX > 50) {
+                prevFact();
+            }
+        }
+    </script>
+</body>
+</html>
