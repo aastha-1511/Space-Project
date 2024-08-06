@@ -308,12 +308,12 @@ section:nth-child(even) .contain .about {
         font-size:2rem;
         margin-left: 45%;
     }
-    .about #sec2,#sec-4,#sec6{
+    .about{
         max-width:30%;
         margin-right: 60px;
     }
 
-    .imgb #sec2,#sec-4,#sec6{
+    .imgb{
         
         max-width: 38%;
         margin-left: 30%;
