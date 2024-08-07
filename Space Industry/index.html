@@ -1,76 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space Industry Facts</title>
+    <link rel="stylesheet" href="si.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
-            background-image: url("/media/bg2.jpg");
-            background-size: cover !important;
-            background-position: center;
-            background-attachment: fixed !important;
-            display: flex !important;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh !important;
-        }
 
-        .container {
-            background-color: rgba(0, 0, 0, 0.7) !important;
-            border-radius: 10px !important;
-            padding: 20px !important;
-            max-width: 600px !important;
-            width: 90% !important;
-            text-align: center !important;
-            margin-top: 70px !important;
-        }
-
-        h1 {
-            color: #fff !important;
-            margin-bottom: 26px !important;
-            font-size: 40px !important;
-        }
-
-        #fact {
-            color: #fff !important;
-            font-size: 19px !important;
-            margin-bottom: 20px !important;
-        }
-
-        .button-container {
-            display: flex !important;
-            justify-content: space-between !important;
-        }
-
-        button {
-            background-color: #e6c403 !important;
-            border: none !important;
-            color: white !important;
-            padding: 10px 20px !important;
-            text-align: center !important;
-            text-decoration: none !important;
-            display: inline-block !important;
-            font-size: 16px !important;
-            font-weight: 500 !important;
-            margin: 4px 2px !important;
-            cursor: pointer !important;
-            border-radius: 5px !important;
-            text-shadow: 0 0 2px black, 0 0 2px black !important;
-        }
-
-        button:hover {
-            background-color: #8c7704 !important;
-        }
-    </style>
 </head>
-
-<body class="flex flex-col min-h-screen">
+<body>
     <div class="container">
         <nav class="bg-black fixed top-0 left-0 right-0 z-50 bg-opacity-90">
             <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -151,79 +89,6 @@
             <button id="next">Next</button>
         </div>
     </div>
-
-    <script>
-        const facts = [
-            "SpaceX's Falcon Heavy is currently the most powerful operational rocket in the world.",
-            "The global space economy was valued at $447 billion in 2020.",
-            "There are over 3,000 active satellites orbiting Earth as of 2021.",
-            "The International Space Station (ISS) has been continuously occupied since November 2000.",
-            "NASA's Artemis program aims to land the first woman and next man on the Moon by 2024.",
-            "The space tourism industry is expected to reach $3 billion by 2030.",
-            "Satellite internet constellations like Starlink aim to provide global broadband coverage.",
-            "The James Webb Space Telescope, launched in 2021, is the largest and most powerful space telescope ever built.",
-            "3D printing technology is being developed for use in space exploration and colonization.",
-            "The space debris problem is becoming increasingly critical, with over 128 million pieces of debris orbiting Earth."
-        ];
-
-        let currentFactIndex = 0;
-        const factElement = document.getElementById('fact');
-        const prevButton = document.getElementById('prev');
-        const nextButton = document.getElementById('next');
-
-        function displayFact() {
-            factElement.textContent = facts[currentFactIndex];
-        }
-
-        function nextFact() {
-            currentFactIndex = (currentFactIndex + 1) % facts.length;
-            displayFact();
-        }
-
-        function prevFact() {
-            currentFactIndex = (currentFactIndex - 1 + facts.length) % facts.length;
-            displayFact();
-        }
-
-        nextButton.addEventListener('click', nextFact);
-        prevButton.addEventListener('click', prevFact);
-
-        // Initialize with the first fact
-        displayFact();
-
-        // Add touch swipe functionality
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        document.addEventListener('touchstart', e => {
-            touchStartX = e.changedTouches[0].screenX;
-        });
-
-        document.addEventListener('touchend', e => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-        });
-
-        function handleSwipe() {
-            if (touchStartX - touchEndX > 50) {
-                nextFact();
-            } else if (touchEndX - touchStartX > 50) {
-                prevFact();
-            }
-        }
-    </script>
-    <script>
-        const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu"]');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuButton.addEventListener('click', () => {
-            const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-            mobileMenuButton.setAttribute('aria-expanded', String(!expanded));
-            mobileMenu.classList.toggle('hidden');
-            mobileMenuButton.querySelector('svg:nth-child(1)').classList.toggle('hidden');
-            mobileMenuButton.querySelector('svg:nth-child(2)').classList.toggle('hidden');
-        });
-    </script>
+    <script src="si.js"></script>
 </body>
-
 </html>
