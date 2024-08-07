@@ -7,8 +7,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     min-height: 100vh;
 }
 
@@ -19,6 +18,7 @@ body {
     max-width: 600px;
     width: 90%;
     text-align: center;
+    margin: auto;
 }
 
 h1 {
@@ -49,7 +49,7 @@ button {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
-    /*text-shadow: 0 0 2px black,0 0 2px black; */
+    text-shadow: 0 0 2px black,0 0 2px black; 
 }
 
 button:hover {
