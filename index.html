@@ -7,6 +7,7 @@
   <title>Space Wonders</title>
   <link rel="stylesheet" href="welcome/jarallax.css">
   <link rel="stylesheet" href="welcome/s.css">
+  <link rel="stylesheet" href="footer/footer.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <!--<link rel="stylesheet" href="main.css">-->
 
@@ -271,31 +272,49 @@
       </div>
     </div>
   </section>
-  <div class="content">
-    <!-- Your main content here -->
-  </div>
-  <footer>
-    <div class="footer-container">
-      <!-- Footer Section -->
-      <div class="footer">
+  <div class="footer">
+    <div class="contact-us">
+        <h2 class="text-blue-700">Contact Us</h2>
+        <p>If you have any questions, please feel free to reach out to us. We'd love to hear from you!</p>
+        <form action="mailto:info@spaceexplorers.com" method="post" enctype="text/plain" onsubmit="showSubmittedMessage()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="3" required></textarea>
+            <input type="submit" class="bg-blue-700" value="Send">
+        </form>
+        <div id="submittedMessage" class="submitted-message">
+            Your query has been submitted. We will respond soon!
+        </div>
+    </div>
+
+    <div class="right-section">
         <div class="logo">
-          <img src="welcome/media/logo.png" alt="Space Explorers Logo">
+            <img src="footer\52b49ab47ba026d0e01eb3346c0e029a.png" alt="Space Explorers Logo">
         </div>
         <p>&copy; 2024 Space Explorers. All rights reserved.</p>
         <p>
-          <a href="welcome/privetpolicy.html">Privacy Policy</a> |
-          <a href="welcome/term.html">Terms of Service</a> |
-          <a href="welcome/contact.html">Contact Us</a>
+            <a href="footer\privetpolicy.html" class="text-blue-700">Privacy-policy & Terms-of-service</a>
         </p>
-        <div class="social-icons">
-          <a href="#facebook"><img src="welcome/media/facebook.png" alt="Facebook"></a>
-          <a href="#twitter"><img src="welcome/media/twitter.png" alt="Twitter"></a>
-          <a href="#instagram"><img src="welcome/media/instagram (1).png" alt="Instagram"></a>
-          <a href="#youtube"><img src="welcome/media/youtube.png" alt="YouTube"></a>
+        <div class="social-icons flex">
+            <a href="#facebook"><img src="footer/icons8-facebook-24 (1).png" alt="Facebook"></a>
+            <a href="#twitter"><img src="footer/icons8-twitter-24 (1).png" alt="Twitter"></a>
+            <a href="#instagram"><img src="footer/icons8-instagram-24 (1).png" alt="Instagram"></a>
+            <a href="#youtube"><img src="footer/icons8-youtube-24 (1).png" alt="YouTube"></a>
         </div>
-      </div>
+        <div class="iframe-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d344267.6834631096!2d72.78337315753859!3d21.17024022657681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be06c5a54776a15%3A0x1fa3f1dbf1f6a3f1!2sSardar%20Vallabhbhai%20National%20Institute%20of%20Technology%2C%20Surat!5e0!3m2!1sen!2sin!4v1646133387756!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+        </div>
     </div>
-  </footer>
+</div>
+<script>
+    function showSubmittedMessage() {
+        document.getElementById("submittedMessage").style.display = "block";
+    }
+</script>
+  
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <script src="welcome/jarallax.js"></script>
   <script src="welcome/jarallax-element.js"></script>
