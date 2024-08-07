@@ -13,7 +13,13 @@
   <title>Document</title>
   <!-- <script src="https://cdn.tailwindcss.com"></script>-->
   <style>
-
+        .gradient-text {
+            background: linear-gradient(to right, rgb(47, 47, 141), yellow, rgb(47, 47, 141));
+            -webkit-background-clip: text;
+            color: transparent;
+            font-size:larger;
+            padding-left: 15px;
+        }
     .nav {
       background-color: rgba(0, 0, 0, 0.9);
       position: fixed;
@@ -32,7 +38,7 @@
 
     .nav .pic img {
       height: 4rem;
-      margin-left: 10%;
+      margin-left: 5%;
     }
 
     .nav .t {
@@ -124,7 +130,7 @@
     <div class="pic">
       <img src="../welcome\media\logo.png" alt="Workflow">
     </div>
-    <div class="t">Space Wonders</div>
+    <div class="gradient-text">Space Wonders</div>
     <div class="menu">
       <a href="../index.html">Home</a>
       <a href="../astro sites\astro.html">Astro sites</a>
