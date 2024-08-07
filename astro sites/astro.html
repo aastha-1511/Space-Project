@@ -11,317 +11,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Web Slider</title>
-    <!--<link rel="stylesheet" href="style1.css">-->
+    <link rel="stylesheet" href="style1.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: rgb(0, 0, 0);
-            background-size: cover;
-            overflow: hidden;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-
-        /*
-.container{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    width:100%;
-    max-width: 1450px;
-    min-height: 700px;
-    background: #000000;
-    box-shadow:0 30px 50px rgb(174, 128, 128);
-    overflow: hidden;
-    
-}
-*/
-        .slide {
-            position: relative;
-            width: 100%;
-            min-height: 700px;
-            display: flex;
-            flex-wrap: nowrap;
-            overflow: hidden;
-            transition: transform 0.5s ease;
-        }
-
-        .slide .item {
-            width: 200px;
-            height: 300px;
-            flex-shrink: 0;
-            position: absolute;
-            top: 50%;
-            /*transform:translate(0,-50%);*/
-            transform: translateY(-50%);
-            border-radius: 20px;
-            box-shadow: 0 30px 50px #f0e59b91;
-            background-position: 50% 50%;
-            background-size: cover;
-            display: inline-block;
-            transition: 0.5s;
-        }
-
-        .slide .item:nth-child(1) {
-            top: 0;
-            left: 0;
-            transform: translate(0, 0);
-            border-radius: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .slide .item:nth-child(2) {
-            left: 50%;
-        }
-
-        .slide .item:nth-child(3) {
-            left: calc(50% + 220px);
-        }
-
-        .slide .item:nth-child(4) {
-            left: calc(50% + 440px);
-        }
-
-        .slide .item:nth-child(n+5) {
-            left: calc(50% + 660px);
-            opacity: 0;
-        }
-
-        .item .content {
-            position: absolute;
-            top: 50%;
-            left: 100px;
-            width: 300px;
-            text-align: left;
-            color: #eee;
-            transform: translate(0, -50%);
-            font-family: system-ui;
-            display: none;
-
-        }
-
-        .slide .item:nth-child(1) .content {
-            display: block;
-        }
-
-        .content .name {
-            font-size: 40px;
-            text-transform: uppercase;
-            font-weight: bold;
-            opacity: 0;
-            animation: animate 1s ease-in-out 1 forwards;
-        }
-
-        .content .info {
-            margin-top: 10px;
-            margin-bottom: 20px;
-            opacity: 0;
-            animation: animate 1s ease-in-out 0.3s 1 forwards;
-        }
-
-        .content .click {
-            display: inline-block;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            color: black;
-            background-color: #e8edf3;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            opacity: 0;
-            font-size: 16px;
-            animation: animate 1s ease-in-out 0.6s 1 forwards;
-            transition: background-color 0.3s;
-        }
-
-        .content .click:hover {
-            background-color: #eab308;
-        }
-
-        @media screen and (max-width: 1300px) {
-            .slide {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .slide .item {
-                width: calc(50% - 200px);
-                /* 3 items per row */
-                height: 200px;
-                margin: 10px;
-                transform: none;
-            }
-
-            .content .name {
-                font-size: 18px;
-            }
-
-            .content .info {
-                font-size: 14px;
-            }
-
-            .content .click {
-                font-size: 12px;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            .slide {
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
-
-            }
-
-            .slide .item {
-                width: calc(55% - 10px);
-                /*2itemsperrow*/
-                height: 200px;
-                margin: 0px;
-                top: 60%;
-                transform: translate(-40%, 0);
-                overflow-y: auto;
-            }
-
-            .item .content {
-                top: 35%;
-                width: 350px;
-                left: 20px;
-            }
-
-            .content .name {
-                font-size: 16px;
-            }
-
-            .content .info {
-                font-size: 15px;
-            }
-
-            .content .click {
-                font-size: 10px;
-            }
-
-        }
-
-        @media screen and (max-width: 300px) {
-            .container {
-                top: 0;
-                left: 0;
-                transform: none;
-                width: 100%;
-                height: auto;
-            }
-
-            .slide {
-                flex-direction: column;
-                min-height: auto;
-            }
-
-            .slide .item {
-                width: 50%;
-                height: 20px;
-                margin: 90px 0;
-                transform: none;
-            }
-
-            .content .name {
-                font-size: 13px;
-            }
-
-            .content .info {
-                font-size: 12px;
-            }
-
-            .content .click {
-                font-size: 10px;
-            }
-        }
-
-        @keyframes animate {
-            from {
-                opacity: 0;
-                transform: translate(0, 100px);
-                filter: blur(33px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translate(0);
-                filter: blur(0);
-            }
-        }
-
-        .button {
-            width: 100%;
-            text-align: center;
-            position: absolute;
-            bottom: 20px;
-        }
-
-        .button button {
-            width: 40px;
-            height: 35px;
-            border-radius: 8px;
-            cursor: pointer;
-            background-color: white;
-            margin: 0 5px;
-            border: 1px solid black;
-            transition: 0.4s;
-        }
-
-        .button button:hover {
-            background: #eab308;
-            color: black;
-        }
-
-        .image-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-
-        .static-image,
-        .animated-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 20px;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            transition: opacity 0.3s ease;
-
-        }
-
-        .static-image {
-            opacity: 1;
-        }
-
-        .animated-video {
-            opacity: 0;
-        }
-
-        .image-container:hover .static-image {
-            opacity: 0;
-        }
-
-        .image-container:hover .animated-video {
-            opacity: 1;
-        }
-    </style>
-
-</head>
-
+    </head>
 <body class="flex flex-col min-h-screen">
     <div
         class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-[1450px] min-h-[700px] bg-black shadow-[0_30px_50px_rgb(174,128,128)] overflow-hidden">
@@ -397,8 +89,8 @@
         <div class="slide">
             <div class="item">
                 <div class="image-container">
-                    <img src="media/img1.jpg" alt="Image 1" class="static-image">
-                    <video src="media/vid1.mp4" alt="Video 1" class="animated-video" autoplay loop muted></video>
+                    <img src="media/img1.jpeg" alt="Image 1" class="static-image">
+                   
                 </div>
                 <div class="content">
                     <div class="name">CalSky</div>
@@ -412,8 +104,8 @@
             </div>
             <div class="item">
                 <div class="image-container">
-                    <img src="media/img2.jpg" alt="Image 2" class="static-image">
-                    <video src="media/vid3.mp4" alt="Video 1" class="animated-video" autoplay loop muted></video>
+                    <img src="media/img3.jpg" alt="Image 2" class="static-image">
+                   
                 </div>
                 <div class="content">
                     <div class="name">Exoplanet Archive</div>
@@ -426,8 +118,8 @@
 
             <div class="item">
                 <div class="image-container">
-                    <img src="media/img3.jpg" alt="Image 3" class="static-image">
-                    <video src="media/vid2.mp4" alt="Video 1" class="animated-video" autoplay loop muted></video>
+                    <img src="media/img.jpg" alt="Image 3" class="static-image">
+                    
                 </div>
                 <div class="content">
                     <div class="name">Extrasolar Planets Encyclopaedia</div>
@@ -444,7 +136,7 @@
             <div class="item">
                 <div class="image-container">
                     <img src="media/img4.jpg" alt="Image 4" class="static-image">
-                    <video src="media/vid4.mp4" alt="Video 1" class="animated-video" autoplay loop muted></video>
+                  
                 </div>
                     <div class="content">
                         <div class="name">Galaxy Zoo</div>
@@ -481,42 +173,7 @@
             </div>
         </div>
         <script src="astro.js">/*
-            document.addEventListener('DOMContentLoaded', () => {
-                // Preload images
-                const gifS = [
-                    'vid1.mp4',
-                    'vid3.mp4',
-                    'vid2.mp4',
-                    'vid4.mp4',
-                    'vid5.mp4'
-                ];
-
-                gifS.forEach(video => {
-                    const videoPreload = document.createElement('video');
-                    videoPreload.src = video;
-                    videoPreload.preload = 'auto';
-                });
-
-                // Show image containers
-                document.querySelectorAll('.image-container').forEach(container => {
-                    container.style.display = 'block';
-                });
-
-                // Slider functionality
-                let next = document.querySelector('.next');
-                let prev = document.querySelector('.prev');
-                let slide = document.querySelector('.slide');
-
-                next.addEventListener('click', function () {
-                    let items = document.querySelectorAll('.item');
-                    slide.appendChild(items[0]); // Move the first item to the end
-                });
-
-                prev.addEventListener('click', function () {
-                    let items = document.querySelectorAll('.item');
-                    slide.prepend(items[items.length - 1]); // Move the last item to the beginning
-                });
-            });*/
+            
         </script>
         <script>
             const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu"]');
