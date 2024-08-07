@@ -1,3 +1,4 @@
+s
 <!DOCTYPE html>
 <html lang="en">
 
@@ -463,29 +464,30 @@
         </div>
     </div>
     <script>
+    
         document.addEventListener('DOMContentLoaded', () => {
-            // Preload videos
+            // Preload images
             const videos = [
                 'vid1.mp4',
-                'vid2.mp4',
                 'vid3.mp4',
+                'vid2.mp4',
                 'vid4.mp4',
                 'vid5.mp4'
             ];
 
-            videos.forEach(video => {
+            gifS.forEach(video => {
                 const videoPreload = document.createElement('video');
                 videoPreload.src = video;
                 videoPreload.preload = 'auto';
                 document.body.appendChild(videoPreload); // Append to body or a hidden container
             });
 
-
             // Show image containers
             document.querySelectorAll('.image-container').forEach(container => {
                 container.style.display = 'block';
             });
 
+            // Slider functionality
             // Slider functionality
             const next = document.querySelector('.next');
             const prev = document.querySelector('.prev');
@@ -569,29 +571,16 @@
                 });
             }
 
-            function goToNextSlide() {
-                currentIndex = (currentIndex + 1) % items.length;
-                updateSlide();
-            }
 
-            function goToPrevSlide() {
-                currentIndex = (currentIndex - 1 + items.length) % items.length;
-                updateSlide();
-            }
+            next.addEventListener('click', function () {
+                let items = document.querySelectorAll('.item');
+                slide.appendChild(items[0]); // Move the first item to the end
+            });
 
-            // Ensure next and prev are properly selected
-            if (next) {
-                next.addEventListener('click', goToNextSlide);
-            } else {
-                console.error("Next button not found");
-            }
-
-            if (prev) {
-                prev.addEventListener('click', goToPrevSlide);
-            } else {
-                console.error("Prev button not found");
-            }
-
+            prev.addEventListener('click', function () {
+                let items = document.querySelectorAll('.item');
+                slide.prepend(items[items.length - 1]); // Move the last item to the beginning
+            });
             // Add click event listeners to each item
             items.forEach((item, index) => {
                 item.addEventListener('click', (event) => {
@@ -614,12 +603,9 @@
                     });
                 }
             });
-
             // Initial update
             updateSlide();
         });
-
-        // Mobile menu script remains unchanged
         const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu"]');
         const mobileMenu = document.getElementById('mobile-menu');
 
@@ -629,6 +615,34 @@
             mobileMenu.classList.toggle('hidden');
             mobileMenuButton.querySelector('svg:nth-child(1)').classList.toggle('hidden');
             mobileMenuButton.querySelector('svg:nth-child(2)').classList.toggle('hidden');
-        }); <
-        /body> <
-        /html>
+        });
+
+
+    
+        function goToNextSlide() {
+        currentIndex = (currentIndex + 1) % items.length;
+        updateSlide();
+        }
+
+        function goToPrevSlide() {
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        updateSlide();
+        }
+
+        // Ensure next and prev are properly selected
+        if (next) {
+        next.addEventListener('click', goToNextSlide);
+        } else {
+        console.error("Next button not found");
+        }
+
+        if (prev) {
+        prev.addEventListener('click', goToPrevSlide);
+        } else {
+        console.error("Prev button not found");
+        }*/
+    </script>
+
+
+    </body> 
+    </html>
