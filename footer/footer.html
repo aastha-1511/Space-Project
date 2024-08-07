@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Footer</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0a0a23; 
+            color: #ffffff;
+        }
+        .footer {
+            background-color: rgba(17, 17, 17, 2);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.5);
+        }
+        .contact-us {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+            flex: 1;
+            margin-right: 20px;
+        }
+        
+        .contact-us p {
+            margin: 10px 0;
+        }
+        .contact-us form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-us label {
+            margin: 10px 0 5px;
+        }
+        .contact-us input,
+        .contact-us textarea {
+            padding: 5px;
+            margin-bottom: 8px;
+            border: none;
+            border-radius: 5px;
+        }
+        .contact-us input[type="submit"] {
+            color: #ffffff;
+            cursor: pointer;
+        }
+        .submitted-message {
+            display: none;
+            color: blue;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .right-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            margin-left: 20px;
+        }
+        .logo {
+            margin-bottom: 10px;
+            align-self: center;
+        }
+        .logo img {
+            width: 120px;
+        }
+        .footer p {
+            margin: 5px 0;
+            font-size: 1em;
+        }
+        .footer a {
+            color: blue;
+            text-decoration: none;
+            margin: 0 5px;
+            font-size: 1em;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .social-icons {
+            margin: 10px 0;
+        }
+        .social-icons img {
+            width: 24px;
+            margin: 0 5px;
+            vertical-align: middle;
+        }
+        .iframe-container {
+            margin-top: 10px;
+            border: none;
+            overflow: hidden;
+            border-radius: 10px;
+            max-width: 100%;
+            height: 200px;
+            width: 400px;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+    <script>
+        function showSubmittedMessage() {
+            document.getElementById("submittedMessage").style.display = "block";
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <div class="contact-us">
+            <h2 class="text-blue-700">Contact Us</h2>
+            <p>If you have any questions, please feel free to reach out to us. We'd love to hear from you!</p>
+            <form action="mailto:info@spaceexplorers.com" method="post" enctype="text/plain" onsubmit="showSubmittedMessage()">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="3" required></textarea>
+                <input type="submit" class="bg-blue-700" value="Send">
+            </form>
+            <div id="submittedMessage" class="submitted-message">
+                Your query has been submitted. We will respond soon!
+            </div>
+        </div>
+
+        <div class="right-section">
+            <div class="logo">
+                <img src="C:\Users\Ananya\OneDrive\Desktop\footer\52b49ab47ba026d0e01eb3346c0e029a.png" alt="Space Explorers Logo">
+            </div>
+            <p>&copy; 2024 Space Explorers. All rights reserved.</p>
+            <p>
+                <a href="C:\Users\Ananya\OneDrive\Desktop\footer\privetpolicy.html" class="text-blue-700">Privacy-policy & Terms-of-service</a>
+            </p>
+            <div class="social-icons flex">
+                <a href="#facebook"><img src="icons8-facebook-24 (1).png" alt="Facebook"></a>
+                <a href="#twitter"><img src="icons8-twitter-24 (1).png" alt="Twitter"></a>
+                <a href="#instagram"><img src="icons8-instagram-24 (1).png" alt="Instagram"></a>
+                <a href="#youtube"><img src="icons8-youtube-24 (1).png" alt="YouTube"></a>
+            </div>
+            <div class="iframe-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d344267.6834631096!2d72.78337315753859!3d21.17024022657681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be06c5a54776a15%3A0x1fa3f1dbf1f6a3f1!2sSardar%20Vallabhbhai%20National%20Institute%20of%20Technology%2C%20Surat!5e0!3m2!1sen!2sin!4v1646133387756!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
