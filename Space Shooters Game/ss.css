@@ -67,6 +67,7 @@ canvas {
 #health, #score {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 10px 20px;
+    margin-top:50px;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }

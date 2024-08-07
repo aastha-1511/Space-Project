@@ -135,9 +135,9 @@ body {
     background: #eab308;
     color: black;
 }
-
+/*
 .image-container {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -150,7 +150,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+}*/
 
 @keyframes animate {
     from {
@@ -259,3 +259,28 @@ body {
         font-size: 10px;
     }
 }
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 20px; /* Add rounded corners */
+    cursor: pointer; 
+}
+
+.static-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px; 
+    transition: transform 0.3s ease; 
+}
+
+.image-container:hover .static-image {
+    transform: scale(1.05); 
+}
+

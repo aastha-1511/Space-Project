@@ -187,6 +187,38 @@
                 mobileMenuButton.querySelector('svg:nth-child(2)').classList.toggle('hidden');
             });
         </script>
+        <script>
+            // Create modal element
+const modal = document.createElement('div');
+modal.className = 'modal';
+modal.innerHTML = `
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+`;
+document.body.appendChild(modal);
+
+const imageContainers = document.querySelectorAll('.image-container');
+
+imageContainers.forEach(container => {
+    container.addEventListener('click', function() {
+        const img = this.querySelector('.static-image');
+        const modalImg = document.getElementById("modalImg");
+        modal.style.display = "block";
+        modalImg.src = img.src;
+    });
+});
+
+const closeBtn = document.querySelector('.close');
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+        </script>
 </body>
 
 </html>
