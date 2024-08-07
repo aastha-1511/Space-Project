@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Web Slider</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 0, 0);
+            background-size: cover;
+            overflow: hidden;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .slide {
+            position: relative;
+            width: 100%;
+            min-height: 700px;
+            display: flex;
+            flex-wrap: nowrap;
+            overflow: hidden;
+            transition: transform 0.5s ease;
+        }
+
+        .slide .item {
+            width: 200px;
+            height: 300px;
+            flex-shrink: 0;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 20px;
+            box-shadow: 0 30px 50px #f0e59b91;
+            background-position: 50% 50%;
+            background-size: cover;
+            display: inline-block;
+            transition: 0.5s;
+        }
+
+        .slide .item:nth-child(1) {
+            top: 0;
+            left: 0;
+            transform: translate(0, 0);
+            border-radius: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide .item:nth-child(2) {
+            left: 50%;
+        }
+
+        .slide .item:nth-child(3) {
+            left: calc(50% + 220px);
+        }
+
+        .slide .item:nth-child(4) {
+            left: calc(50% + 440px);
+        }
+
+        .slide .item:nth-child(n+5) {
+            left: calc(50% + 660px);
+            opacity: 0;
+        }
+
+        .item .content {
+            position: absolute;
+            top: 50%;
+            left: 100px;
+            width: 300px;
+            text-align: left;
+            color: #eee;
+            transform: translate(0, -50%);
+            font-family: system-ui;
+            display: none;
+        }
+
+        .slide .item:nth-child(1) .content {
+            display: block;
+        }
+
+        .content .name {
+            font-size: 40px;
+            text-transform: uppercase;
+            font-weight: bold;
+            opacity: 0;
+            animation: animate 1s ease-in-out 1 forwards;
+        }
+
+        .content .info {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: animate 1s ease-in-out 0.3s 1 forwards;
+        }
+
+        .content .click {
+            display: inline-block;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            background-color: #e8edf3;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            opacity: 0;
+            font-size: 16px;
+            animation: animate 1s ease-in-out 0.6s 1 forwards;
+            transition: background-color 0.3s;
+        }
+
+        .content .click:hover {
+            background-color: #eab308;
+        }
+
+        @media screen and (max-width: 1300px) {
+            .slide {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .slide .item {
+                width: calc(50% - 200px);
+                height: 200px;
+                margin: 10px;
+                transform: none;
+            }
+
+            .content .name {
+                font-size: 18px;
+            }
+
+            .content .info {
+                font-size: 14px;
+            }
+
+            .content .click {
+                font-size: 12px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .slide {
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .slide .item {
+                width: calc(55% - 10px);
+                height: 200px;
+                margin: 0px;
+                top: 60%;
+                transform: translate(-40%, 0);
+                overflow-y: auto;
+            }
+
+            .item .content {
+                top: 35%;
+                width: 350px;
+                left: 20px;
+            }
+
+            .content .name {
+                font-size: 16px;
+            }
+
+            .content .info {
+                font-size: 15px;
+            }
+
+            .content .click {
+                font-size: 10px;
+            }
+        }
+
+        @media screen and (max-width: 300px) {
+            .container {
+                top: 0;
+                left: 0;
+                transform: none;
+                width: 100%;
+                height: auto;
+            }
+
+            .slide {
+                flex-direction: column;
+                min-height: auto;
+            }
+
+            .slide .item {
+                width: 50%;
+                height: 20px;
+                margin: 90px 0;
+                transform: none;
+            }
+
+            .content .name {
+                font-size: 13px;
+            }
+
+            .content .info {
+                font-size: 12px;
+            }
+
+            .content .click {
+                font-size: 10px;
+            }
+        }
+
+        @keyframes animate {
+            from {
+                opacity: 0;
+                transform: translate(0, 100px);
+                filter: blur(33px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(0);
+                filter: blur(0);
+            }
+        }
+
+        .button {
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 20px;
+        }
+
+        .button button {
+            width: 40px;
+            height: 35px;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: white;
+            margin: 0 5px;
+            border: 1px solid black;
+            transition: 0.4s;
+        }
+
+        .button button:hover {
+            background: #eab308;
+            color: black;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .static-image,
+        .animated-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: opacity 0.3s ease;
+        }
+
+        .static-image {
+            opacity: 1;
+        }
+
+        .animated-video {
+            opacity: 0;
+        }
+
+        .image-container:hover .static-image {
+            opacity: 0;
+        }
+
+        .image-container:hover .animated-video {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen">
+    <div
+        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-[1450px] min-h-[700px] bg-black shadow-[0_30px_50px_rgb(174,128,128)] overflow-hidden">
+        <nav class="bg-black fixed top-0 left-0 right-0 z-50 bg-opacity-90">
+            <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+                <div class="relative flex items-center justify-between h-16">
+                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                        <!-- Mobile menu button -->
+                        <button type="button"
+                            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                            aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <!-- Icon when menu is closed -->
+                            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                            <!-- Icon when menu is open -->
+                            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+                        <div class="flex-shrink-0">
+                            <img class="h-8 w-8"
+                                src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow">
+                        </div>
+                        <div class="hidden sm:block sm:ml-6">
+                            <div class="flex space-x-4">
+                                <a href="#"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                                <a href="#"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+                                <a href="#"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                                <a href="#"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="slide">
+            <div class="item">
+                <div class="image-container">
+                    <img class="static-image"
+                        src="img1.jpg" alt="Image 1">
+                    <video class="animated-video" autoplay loop muted>
+                        <source src="vid1.mp4"
+                            type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="item">
+                <div class="image-container">
+                    <img class="static-image"
+                        src="img2.jpg" alt="Image 2">
+                    <video class="animated-video" autoplay loop muted>
+                        <source src="vid2.mp4"
+                            type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="item">
+                <div class="image-container">
+                    <img class="static-image"
+                        src="img3.jpg" alt="Image 3">
+                    <video class="animated-video" autoplay loop muted>
+                        <source src="vid3.mp4"
+                            type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="item">
+                <div class="image-container">
+                    <img class="static-image"
+                        src="img4.jpg" alt="Image 4">
+                    <video class="animated-video" autoplay loop muted>
+                        <source src="vid4.mp4"
+                            type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="button">
+        <button type="button" class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+        <button type="button" class="next"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Preload videos
+            const videos = [
+                'vid1.mp4',
+                'vid2.mp4',
+                'vid3.mp4',
+                'vid4.mp4',
+                'vid5.mp4'
+            ];
+    
+            videos.forEach(video => {
+                const videoPreload = document.createElement('video');
+                videoPreload.src = video;
+                videoPreload.preload = 'auto';
+            });
+    
+            // Show image containers
+            document.querySelectorAll('.image-container').forEach(container => {
+                container.style.display = 'block';
+            });
+    
+            // Slider functionality
+            let next = document.querySelector('.next');
+            let prev = document.querySelector('.prev');
+            let slide = document.querySelector('.slide');
+            let items = document.querySelectorAll('.item');
+    
+            let currentIndex = 0;
+    
+            function updateSlide() {
+                items.forEach((item, index) => {
+                    if (index === currentIndex) {
+                        item.style.left = '0';
+                        item.style.top = '0';
+                        item.style.transform = 'translate(0, 0)';
+                        item.style.width = '100%';
+                        item.style.height = '100%';
+                        item.style.opacity = '1';
+                        item.querySelector('.content').style.display = 'block';
+                    } else if (index === (currentIndex + 1) % items.length) {
+                        item.style.left = '50%';
+                        item.style.top = '50%';
+                        item.style.transform = 'translateY(-50%)';
+                        item.style.width = '200px';
+                        item.style.height = '300px';
+                        item.style.opacity = '1';
+                        item.querySelector('.content').style.display = 'none';
+                    } else if (index === (currentIndex + 2) % items.length) {
+                        item.style.left = 'calc(50% + 220px)';
+                        item.style.top = '50%';
+                        item.style.transform = 'translateY(-50%)';
+                        item.style.width = '200px';
+                        item.style.height = '300px';
+                        item.style.opacity = '1';
+                        item.querySelector('.content').style.display = 'none';
+                    } else if (index === (currentIndex + 3) % items.length) {
+                        item.style.left = 'calc(50% + 440px)';
+                        item.style.top = '50%';
+                        item.style.transform = 'translateY(-50%)';
+                        item.style.width = '200px';
+                        item.style.height = '300px';
+                        item.style.opacity = '1';
+                        item.querySelector('.content').style.display = 'none';
+                    } else {
+                        item.style.left = 'calc(50% + 660px)';
+                        item.style.top = '50%';
+                        item.style.transform = 'translateY(-50%)';
+                        item.style.width = '200px';
+                        item.style.height = '300px';
+                        item.style.opacity = '0';
+                        item.querySelector('.content').style.display = 'none';
+                    }
+                });
+            }
+    
+            next.addEventListener('click', function () {
+                currentIndex = (currentIndex + 1) % items.length;
+                updateSlide();
+            });
+    
+            prev.addEventListener('click', function () {
+                currentIndex = (currentIndex - 1 + items.length) % items.length;
+                updateSlide();
+            });
+    
+            // Initialize the slide
+            updateSlide();
+        });
+    </script>
+    <script>
+        const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu"]');
+        const mobileMenu = document.getElementById('mobile-menu');
+    
+        mobileMenuButton.addEventListener('click', () => {
+            const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', String(!expanded));
+            mobileMenu.classList.toggle('hidden');
+            mobileMenuButton.querySelector('svg:nth-child(1)').classList.toggle('hidden');
+            mobileMenuButton.querySelector('svg:nth-child(2)').classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

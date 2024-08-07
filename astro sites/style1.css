@@ -273,7 +273,7 @@ body {
 }
 
 .static-image,
-.animated-gif {
+.animated-video {
     position: absolute;
     top: 0;
     left: 0;
@@ -291,7 +291,7 @@ body {
     opacity: 1;
 }
 
-.animated-gif {
+.animated-video {
     opacity: 0;
 }
 
@@ -299,6 +299,6 @@ body {
     opacity: 0;
 }
 
-.image-container:hover .animated-gif {
+.image-container:hover .animated-video {
     opacity: 1;
 }

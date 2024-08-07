@@ -1,62 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Wonders</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.0/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sans:wght@400;700&display=swap');
+        .stars {
+            background-image: url('b4.png');
+        }
+        .jarallax-img {
+            background-image: url('a2.jpg');
+        }
+        .heading h1 {
+            background-color: #FFD700;
+            background-image: linear-gradient(90deg, #FFD700 0%, #FFBF00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeIn 3s ease-out 3s forwards, glow 1.5s ease-in-out infinite alternate;
+        }
+        .heading p {
+            color: #f0f0f0;
+            animation: fadeIn 2s ease-out 2s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 191, 0, 0.7);
+            }
+            to {
+                text-shadow: 0 0 30px rgba(255, 215, 0, 1), 0 0 60px rgba(255, 191, 0, 0.8);
+            }
+        }
+        .astronaut {
+            background: url("534-5340173_astronaut-space-cartoon-clipart.png") no-repeat center center;
+            background-size: contain;
+            animation: zigzag 10s linear infinite;
+        }
+        @keyframes zigzag {
+            0% {
+                left: -150px;
+                top: 20%;
+            }
+            25% {
+                left: 25%;
+                top: 30%;
+            }
+            50% {
+                left: 50%;
+                top: 20%;
+            }
+            75% {
+                left: 75%;
+                top: 30%;
+            }
+            100% {
+                left: 100%;
+                top: 20%;
+            }
+        }
+        .welcome-bg {
+            background: radial-gradient(circle, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
+        }
+        .welcome-bg::before {
+            content: '';
+            background: url('https://cdn.pixabay.com/photo/2016/11/29/11/45/space-1867887_960_720.jpg') no-repeat center center;
+            background-size: cover;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+    <section class="section2 relative min-h-screen flex justify-center items-center">
+        <div class="stars absolute w-full h-full bg-cover bg-repeat"></div>
+        <div class="box relative">
+            <h2 class="text-white text-5xl mb-5 underline font-sans ml-52" data-jarallax-element="0 -300">ASTRONOMICAL LINKS</h2>
+            <div class="contain flex justify-between items-center w-full max-w-4xl relative">
+                <div id="sec-2" class="imgb jarallax relative w-full h-96 overflow-hidden shadow-lg border-2 border-blue-900 rounded-lg">
+                    <img src="a2.jpg" alt="int1" class="jarallax-img absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="about absolute right-0 mt-32 mb-10 p-10 bg-gray-700 z-10 max-w-md text-white shadow-lg border-b-4 border-blue-800" data-jarallax-element="-250 0">
+                    <p>Welcome to our curated collection of astronomical resources, where we've gathered a comprehensive list of the most informative and fascinating websites dedicated to the wonders of the universe. Whether you're an amateur stargazer or a seasoned astronomer, you'll find valuable information and engaging content that will deepen your understanding and appreciation of the cosmos. Each link is carefully selected to ensure high-quality, reliable, and up-to-date information, making this your go-to resource for all things astronomical.</p>
+                    <a href="http://127.0.0.1:5500/astro%20sites/astro.html" class="inline-flex items-center rounded-lg border-2 border-white p-1 mt-2 bg-blue-800 text-white font-semibold hover:bg-indigo-950">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section2 relative min-h-screen flex justify-center items-center">
+        <div class="stars absolute w-full h-full bg-cover bg-repeat"></div>
+        <div class="box relative">
+            <h2 class="text-white text-5xl mb-5 underline font-sans ml-52" data-jarallax-element="0 300">SPACE-INVADERS</h2>
+            <div class="contain flex justify-between items-center w-full max-w-4xl relative flex-row-reverse">
+                <div id="sec-3" class="imgb jarallax relative w-full h-96 overflow-hidden shadow-lg border-2 border-blue-900 rounded-lg">
+                    <img src="a3.jpg" alt="int2" class="jarallax-img absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="about absolute left-0 mt-32 mb-10 p-10 bg-gray-700 z-10 max-w-md text-white shadow-lg border-b-4 border-blue-800" data-jarallax-element="-250 0">
+                    <p>Welcome to our interactive gaming page, featuring the classic arcade game, Space Invader! Relive the nostalgia of the golden age of video games with this timeless shooter where you defend the Earth from waves of alien invaders. The game is seamlessly integrated into our webpage, providing a smooth and engaging experience whether you're playing on a desktop or mobile device. Happy playing, and may the best invader conqueror win!</p>
+                    <a href="http://127.0.0.1:5500/Space%20Shooters%20Game/index.html" class="inline-flex items-center rounded-lg border-2 border-white p-1 mt-2 bg-blue-800 text-white font-semibold hover:bg-indigo-950">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section2 relative min-h-screen flex justify-center items-center">
+        <div class="stars absolute w-full h-full bg-cover bg-repeat"></div>
+        <div class="box relative">
+            <h2 class="text-white text-5xl mb-5 underline font-sans ml-52" data-jarallax-element="0 -300">TIMELINE</h2>
+            <div class="contain flex justify-between items-center w-full max-w-4xl relative">
+                <div id="sec-4" class="imgb jarallax relative w-full h-96 overflow-hidden shadow-lg border-2 border-blue-900 rounded-lg">
+                    <img src="a4.jpg" alt="int3" class="jarallax-img absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="about absolute right-0 mt-32 mb-10 p-10 bg-gray-700 z-10 max-w-md text-white shadow-lg border-b-4 border-blue-800" data-jarallax-element="-250 0">
+                    <p>Our comprehensive timeline of space missions offers an immersive journey through the history of humanity's exploration of the cosmos. This webpage meticulously chronicles key milestones in space exploration, from the early days of the Space Race to the latest interplanetary missions. With an intuitive and visually appealing layout, you can easily navigate through decades of space history. Whether you're a space enthusiast, student, or researcher, this timeline offers a rich and educational experience, highlighting the incredible progress we've made in our quest to explore the final frontier.</p>
+                    <button type="button" class="flex items-center rounded-lg border-2 border-white p-1 mt-2 bg-blue-800 text-white font-semibold hover:bg-indigo-950">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section2 relative min-h-screen flex justify-center items-center">
+        <div class="stars absolute w-full h-full bg-cover bg-repeat"></div>
+        <div class="box relative">
+            <h2 class="text-white text-5xl mb-5 underline font-sans ml-52" data-jarallax-element="0 300">SPACE TOUR</h2>
+            <div class="contain flex justify-between items-center w-full max-w-4xl relative flex-row-reverse">
+                <div id="sec-5" class="imgb jarallax relative w-full h-96 overflow-hidden shadow-lg border-2 border-blue-900 rounded-lg">
+                    <img src="a5.jpg!w700wp" alt="int4" class="jarallax-img absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="about absolute left-0 mt-32 mb-10 p-10 bg-gray-700 z-10 max-w-md text-white shadow-lg border-b-4 border-blue-800" data-jarallax-element="-250 0">
+                    <p>Embark on a virtual tour of the most fascinating and awe-inspiring destinations in space. This section provides an immersive experience that allows you to explore the wonders of our solar system and beyond, from the comfort of your home. With interactive features and detailed visualizations, you'll be able to virtually visit distant planets, moons, and galaxies, gaining insights into their unique characteristics and phenomena. This tour is perfect for anyone interested in deepening their understanding of the universe and experiencing the beauty of space in a new way.</p>
+                    <a href="http://127.0.0.1:5500/space%20tour/index.html" class="inline-flex items-center rounded-lg border-2 border-white p-1 mt-2 bg-blue-800 text-white font-semibold hover:bg-indigo-950">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="welcome-bg relative flex items-center justify-center min-h-screen">
+        <div class="absolute inset-0">
+            <div class="container mx-auto text-center text-white">
+                <h2 class="text-6xl font-bold mb-5">Explore the Universe</h2>
+                <p class="text-2xl">Join us on an adventure through the stars and beyond.</p>
+            </div>
+        </div>
+        <div class="astronaut absolute"></div>
+    </footer>
+</body>
+</html>
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space Wonders</title>
-    <link rel="stylesheet" href="jarallax.css">
-    <link rel="stylesheet" href="s.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jarallax@1.12.1/dist/jarallax.min.js"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: sans-serif;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Truculenta:wght@400;700&display=swap');
 
         body {
             margin: 0;
             padding: 0;
-            width: 100%;
-            font-family: "Truculenta", sans-serif;
+            font-family: 'Truculenta', sans-serif;
             background: black;
+            color: #ffffff;
             overflow-x: hidden;
         }
 
-        .jarallax {
-            position: relative;
-            z-index: 0;
-            min-height: 100vh;
-        }
-
-        .jarallax-img {
-            position: absolute;
-            object-fit: cover;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        .welcome-bg {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
         .stars {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
             background: url('b4.png') repeat;
+            position: absolute;
             animation: moveStars 50s linear infinite;
-            z-index: 1;
+            z-index: -1;
         }
 
         @keyframes moveStars {
@@ -69,27 +193,34 @@
             }
         }
 
-        .heading {
-            color: whitesmoke;
-            position: relative;
-            z-index: 2;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-        }
-
         .heading h1 {
-            font-size: 6vw;
+            font-size: clamp(3rem, 8vw, 9rem);
             margin: 0;
-            background-color: #FFD700;
-            background-image: linear-gradient(90deg, #FFD700 0%, #FFBF00 100%);
+            background: linear-gradient(90deg, #FFD700 0%, #FFBF00 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: fadeIn 3s ease-out 3s forwards, glow 1.5s ease-in-out infinite alternate;
         }
 
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 191, 0, 0.7);
+            }
+
+            to {
+                text-shadow: 0 0 30px rgba(255, 215, 0, 1), 0 0 60px rgba(255, 191, 0, 0.8);
+            }
+        }
+
         .heading p {
-            font-size: 3vw;
+            font-size: clamp(1.5rem, 4vw, 3rem);
             margin: 20px 0 0;
-            color: #f0f0f0;
             animation: fadeIn 2s ease-out 2s forwards;
             opacity: 0;
         }
@@ -98,7 +229,7 @@
             position: absolute;
             width: 150px;
             height: 150px;
-            background: url("astronaut.png") no-repeat center center;
+            background: url("534-5340173_astronaut-space-cartoon-clipart.png") no-repeat center center;
             background-size: contain;
             z-index: 2;
             animation: zigzag 10s linear infinite;
@@ -106,7 +237,7 @@
 
         @keyframes zigzag {
             0% {
-                left: -10%;
+                left: -150px;
                 top: 20%;
             }
 
@@ -126,233 +257,157 @@
             }
 
             100% {
-                left: 110%;
+                left: 100%;
                 top: 20%;
             }
         }
 
-        .content-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 50px 20px;
+        .section-content {
+            background: rgba(58, 56, 56, 0.8);
+            border-bottom: 9px solid rgb(18, 22, 244);
         }
 
-        h2 {
-            color: #ffffff;
-            font-size: 3em;
-            margin-bottom: 30px;
-            text-decoration: underline;
-            z-index: 100;
+        .custom-box-shadow-1 {
+            box-shadow: -20px 35px 40px rgba(15, 53, 190, 0.608);
         }
 
-        .content-box {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 30px;
-            z-index: 10;
+        .custom-box-shadow-2 {
+            box-shadow: 20px 35px 40px rgba(15, 53, 190, 0.608);
         }
 
-        .image-box {
-            flex: 1;
-            max-width: 50%;
-            overflow: hidden;
-            border-radius: 10px;
-            z-index: 100;
-            box-shadow: 0 0 20px rgba(15, 53, 190, 0.6);
-        }
-
-        .text-box {
-            flex: 1;
-            padding: 30px;
-            background: rgba(77, 177, 243, 0.8);
-            color: #fff;
-            border-radius: 10px;
-        }
-
-        .learn-more-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #0056b3;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .learn-more-btn:hover {
-            background-color: #003d82;
+        .custom-box-shadow-3 {
+            box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
         }
 
         @media (max-width: 768px) {
-            .heading h1 {
-                font-size: 8vw;
-            }
-
-            .heading p {
-                font-size: 4vw;
-            }
-
-            .content-box {
-                flex-direction: column;
-            }
-
-            .image-box,
-            .text-box {
-                max-width: 100%;
-            }
-
-            h2 {
-                font-size: 2em;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .heading h1 {
-                font-size: 10vw;
-            }
-
-            .heading p {
-                font-size: 5vw;
-            }
-
-            h2 {
-                font-size: 1.5em;
+            .section-content {
+                max-width: 90%;
+                margin: 2rem auto;
             }
         }
     </style>
 </head>
 
 <body class="flex flex-col min-h-screen">
-    <!-- Navigation code remains the same -->
     <nav class="bg-black fixed top-0 left-0 right-0 z-50 bg-opacity-90">
-        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-          <div class="relative flex items-center justify-between h-16">
-            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-              <button type="button"
-                class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                aria-controls="mobile-menu" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-                <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-            <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-              <div class="flex-shrink-0 flex items-center">
-                <!--<img class="block lg:hidden h-13 w-auto"
-                          src="image.png" alt="Workflow">-->
-                <img class="hidden lg:block pb-1 h-12 w-auto" src="52b49ab47ba026d0e01eb3346c0e029a.png" alt="Workflow">
-              </div>
-              <div class="text-white ml-2 text-xl p-2 font-semibold">Space Wonders</div>
-              <div class="hidden sm:block sm:ml-96">
-                <!-- Changed from sm:ml-4 to sm:ml-auto -->
-                <div class="flex space-x-4">
-                  <a href="#" class="bg-yellow-500 text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                  <a href="#"
-                    class="text-white hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Astro
-                    sites</a>
-                  <a href="#"
-                    class="text-white  hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Solar
-                    Tour</a>
-                  <a href="#"
-                    class="text-white  hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Game</a>
-                  <a href="#"
-                    class="text-white  hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Timeline</a>
-                  <a href="#"
-                    class="text-white  hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Technology</a>
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <img class="h-8 w-auto" src="52b49ab47ba026d0e01eb3346c0e029a.png" alt="Space Wonders">
+                    <span class="text-white ml-2 text-xl font-semibold">Space Wonders</span>
                 </div>
-              </div>
+                <div class="hidden md:block">
+                    <div class="flex items-baseline space-x-4">
+                        <a href="#" class="bg-yellow-500 text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="../astro sites/astro.html"
+                            class="text-white hover:bg-yellow-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Astro
+                            sites</a>
+                        <a href="../solar_tour/template.html"
+                            class="text-white hover:bg-yellow-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Solar
+                            Tour</a>
+                        <a href="../Space Shooters Game/index.html"
+                            class="text-white hover:bg-yellow-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Game</a>
+                        <a href="../spacemissions_timeline/index.html"
+                            class="text-white hover:bg-yellow-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Timeline</a>
+                        <a href="../Space Industry/index.html"
+                            class="text-white hover:bg-yellow-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Technology</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-400 hover:text-white focus:outline-none focus:text-white"
+                        id="mobile-menu-button">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
             </div>
-          </div>
         </div>
-    
-        <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="sm:hidden hidden" id="mobile-menu">
-          <div class="sm:hidden" id="mobile-menu">
-            <div class="px-3 pt-2 pb-3 space-y-1">
-              <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
-              <a href="#"
-                class="text-white  hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Astro
-                sites</a>
-              <a href="#"
-                class="text-white  hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Solar
-                Tour</a>
-              <a href="#"
-                class="text-white  hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Game</a>
-              <a href="#"
-                class="text-white  hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Timeline</a>
-              <a href="#"
-                class="text-white  hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Technology</a>
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#" class="bg-yellow-500 text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="../astro sites/astro.html"
+                    class="text-white hover:bg-yellow-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Astro
+                    sites</a>
+                <a href="../solar_tour/template.html"
+                    class="text-white hover:bg-yellow-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Solar
+                    Tour</a>
+                <a href="../Space Shooters Game/index.html"
+                    class="text-white hover:bg-yellow-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Game</a>
+                <a href="../spacemissions_timeline/index.html"
+                    class="text-white hover:bg-yellow-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Timeline</a>
+                <a href="../Space Industry/index.html"
+                    class="text-white hover:bg-yellow-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Technology</a>
             </div>
-          </div>
         </div>
-      </nav>
+    </nav>
 
-    <section id="welcome" class="welcome-bg jarallax">
-        <img class="jarallax-img" src="space-background.jpg" alt="Space background">
+    <section id="welcome" class="relative flex items-center justify-center min-h-screen">
         <div class="stars"></div>
-        <div class="heading">
+        <div class="heading text-center z-10">
             <h1>Welcome to Space Wonders</h1>
             <p>Explore the mysteries of the universe</p>
         </div>
         <div class="astronaut"></div>
     </section>
 
-    <section class="jarallax">
-        <img class="jarallax-img" src="stars-background.jpg" alt="Stars background">
-        <div class="stars"></div>
-        <div class="content-wrapper">
-            <h2 data-jarallax-element="0 -300">ASTRONOMICAL LINKS</h2>
-            <div class="content-box">
-                <div class="image-box jarallax" data-jarallax-element="-200 0">
-                    <img src="a1.png" alt="int1" class="jarallax-img">
+    <section id="section-2" class="py-12 bg-black bg-opacity-90">
+        <div class="section-content mx-auto max-w-7xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-5xl font-bold text-white">Solar System</h2>
+                <p class="text-gray-300 mt-4">Dive into the wonders of our Solar System.</p>
+            </div>
+            <div class="flex flex-col lg:flex-row items-center justify-center space-y-8 lg:space-y-0 lg:space-x-8">
+                <div
+                    class="relative w-[800px] h-[400px] overflow-hidden custom-box-shadow-1 border-2 border-blue-800 rounded-lg mb-4 lg:mb-0"
+                    data-jarallax-element="0 -200">
+                    <img src="../solar_tour/solar_background-2048.jpg" alt="Solar System"
+                        class="w-full h-full object-cover transition-transform duration-500 transform hover:scale-110">
+                    <div
+                        class="absolute lg:relative lg:bottom-auto bottom-0 left-0 p-4 bg-black bg-opacity-75 w-full lg:w-auto">
+                        <h3 class="text-lg lg:text-xl font-bold text-white">Solar System</h3>
+                        <p class="text-sm lg:text-base text-gray-300">Explore the planets in our solar system.</p>
+                    </div>
                 </div>
-                <div class="text-box" data-jarallax-element="-250 0">
-                    <p>
-                        <!-- Content remains the same -->
-                        Welcome to our curated collection of astronomical resources, where we've gathered a
-                        comprehensive list of the most informative and fascinating websites dedicated to the wonders of the
-                        universe.
-                    </p>
-                    <a href="http://127.0.0.1:5500/astro%20sites/astro.html" class="learn-more-btn">
-                        Learn More
-                    </a>
+                <div
+                    class="relative w-[800px] h-[400px] overflow-hidden custom-box-shadow-1 border-2 border-blue-800 rounded-lg mb-4 lg:mb-0"
+                    data-jarallax-element="0 -200">
+                    <img src="../solar_tour/solar_background-2048.jpg" alt="Solar System"
+                        class="w-full h-full object-cover transition-transform duration-500 transform hover:scale-110">
+                    <div
+                        class="absolute lg:relative lg:bottom-auto bottom-0 left-0 p-4 bg-black bg-opacity-75 w-full lg:w-auto">
+                        <h3 class="text-lg lg:text-xl font-bold text-white">Solar System</h3>
+                        <p class="text-sm lg:text-base text-gray-300">Explore the planets in our solar system.</p>
+                    </div>
+                </div>
+                <div
+                    class="relative w-[800px] h-[400px] overflow-hidden custom-box-shadow-1 border-2 border-blue-800 rounded-lg"
+                    data-jarallax-element="0 -200">
+                    <img src="../solar_tour/solar_background-2048.jpg" alt="Solar System"
+                        class="w-full h-full object-cover transition-transform duration-500 transform hover:scale-110">
+                    <div
+                        class="absolute lg:relative lg:bottom-auto bottom-0 left-0 p-4 bg-black bg-opacity-75 w-full lg:w-auto">
+                        <h3 class="text-lg lg:text-xl font-bold text-white">Solar System</h3>
+                        <p class="text-sm lg:text-base text-gray-300">Explore the planets in our solar system.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
 
-
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <script src="jarallax.js"></script>
-  <script src="jarallax-element.js"></script>
-  <script type="text/javascript">
-    jarallax(document.querySelectorAll('.jarallax'), {
-      speed: 0.2,
-    });
-    jarallax(document.querySelectorAll('[data-jarallax-element]'), {
-      speed: 0.2,
-    });
-  </script>
-  <script>
-    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu"]');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    mobileMenuButton.addEventListener('click', () => {
-      const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-      mobileMenuButton.setAttribute('aria-expanded', String(!expanded));
-      mobileMenu.classList.toggle('hidden');
-      mobileMenuButton.querySelector('svg:nth-child(1)').classList.toggle('hidden');
-      mobileMenuButton.querySelector('svg:nth-child(2)').classList.toggle('hidden');
-    });
-  </script>
+        // Initialize Jarallax
+        jarallax(document.querySelectorAll('[data-jarallax-element]'), {
+            speed: 0.2
+        });
+    </script>
 </body>
 
 </html>
+-->

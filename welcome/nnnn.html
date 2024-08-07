@@ -1,0 +1,760 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Wonders</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Truculenta:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Truculenta', sans-serif;
+            background: black;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .stars {
+            width: 100%;
+            height: 100%;
+            background: url('b4.png') repeat;
+            position: absolute;
+            animation: moveStars 50s linear infinite;
+        }
+
+        @keyframes moveStars {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: -10000px 5000px;
+            }
+        }
+
+        .heading h1 {
+            font-size: clamp(3rem, 8vw, 9rem);
+            margin: 0;
+            background: linear-gradient(90deg, #FFD700 0%, #FFBF00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeIn 3s ease-out 3s forwards, glow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 191, 0, 0.7);
+            }
+
+            to {
+                text-shadow: 0 0 30px rgba(255, 215, 0, 1), 0 0 60px rgba(255, 191, 0, 0.8);
+            }
+        }
+
+        .heading p {
+            font-size: clamp(1.5rem, 4vw, 3rem);
+            margin: 20px 0 0;
+            animation: fadeIn 2s ease-out 2s forwards;
+            opacity: 0;
+        }
+
+        .astronaut {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: url("534-5340173_astronaut-space-cartoon-clipart.png") no-repeat center center;
+            background-size: contain;
+            z-index: 2;
+            animation: zigzag 10s linear infinite;
+        }
+
+        @keyframes zigzag {
+            0% {
+                left: -150px;
+                top: 20%;
+            }
+
+            25% {
+                left: 25%;
+                top: 30%;
+            }
+
+            50% {
+                left: 50%;
+                top: 20%;
+            }
+
+            75% {
+                left: 75%;
+                top: 30%;
+            }
+
+            100% {
+                left: 100%;
+                top: 20%;
+            }
+        }
+
+        .section-content {
+            background: rgba(58, 56, 56, 0.8);
+            border-bottom: 9px solid rgb(18, 22, 244);
+        }
+
+        @media (max-width: 768px) {
+            .section-content {
+                max-width: 90%;
+                margin: 2rem auto;
+            }
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen">
+    <nav class="bg-black fixed top-0 left-0 right-0 z-50 bg-opacity-90">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <img class="h-8 w-auto" src="52b49ab47ba026d0e01eb3346c0e029a.png" alt="Space Wonders">
+                    <span class="text-white ml-2 text-xl font-semibold">Space Wonders</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="flex items-baseline space-x-4">
+                        <a href="#" class="bg-yellow-500 text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="../astro sites/astro.html"
+                            class="text-white hover:bg-yellow-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Astro
+                            sites</a>
+                        <a href="../solar_tour/template.html"
+                            class="text-white hover:bg-yellow-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Solar
+                            Tour</a>
+                        <a href="../Space Shooters Game/index.html"
+                            class="text-white hover:bg-yellow-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Game</a>
+                        <a href="../spacemissions_timeline/index.html"
+                            class="text-white hover:bg-yellow-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Timeline</a>
+                        <a href="../Space Industry/index.html"
+                            class="text-white hover:bg-yellow-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Technology</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-400 hover:text-white focus:outline-none focus:text-white"
+                        id="mobile-menu-button">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#" class="bg-yellow-500 text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="../astro sites/astro.html"
+                    class="text-white hover:bg-yellow-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Astro
+                    sites</a>
+                <a href="../solar_tour/template.html"
+                    class="text-white hover:bg-yellow-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Solar
+                    Tour</a>
+                <a href="../Space Shooters Game/index.html"
+                    class="text-white hover:bg-yellow-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Game</a>
+                <a href="../spacemissions_timeline/index.html"
+                    class="text-white hover:bg-yellow-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Timeline</a>
+                <a href="../Space Industry/index.html"
+                    class="text-white hover:bg-yellow-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Technology</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="welcome" class="relative flex items-center justify-center min-h-screen">
+        <div class="stars"></div>
+        <div class="heading text-center z-10">
+            <h1>Welcome to Space Wonders</h1>
+            <p>Explore the mysteries of the universe</p>
+        </div>
+        <div class="astronaut"></div>
+    </section>
+
+    <section class="relative py-16">
+        <div class="stars"></div>
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center">ASTRONOMICAL LINKS</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                    <img src="a1.png" alt="Astronomical Links" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+                <div class="w-full md:w-1/2 md:pl-8">
+                    <div class="section-content p-6 rounded-lg">
+                        <p class="mb-4">
+                            Welcome to our curated collection of astronomical resources, where we've gathered a
+                            comprehensive list of the most informative and fascinating websites dedicated to the wonders
+                            of the
+                            universe. Whether you're an amateur stargazer or a seasoned astronomer, you'll find valuable
+                            information and
+                            engaging content that will deepen your understanding and appreciation of the cosmos.
+                        </p>
+                        <a href="../astro sites/astro.html"
+                            class="inline-block bg-blue-800 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-950 transition duration-300">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative py-16">
+        <div class="stars"></div>
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center">SPACE-INVADERS</h2>
+            <div class="flex flex-col md:flex-row-reverse items-center">
+                <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                    <img src="a3.jpg" alt="Space Invaders" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+                <div class="w-full md:w-1/2 md:pr-8">
+                    <div class="section-content p-6 rounded-lg">
+                        <p class="mb-4">
+                            Welcome to our interactive gaming page, featuring the classic arcade game, Space Invader!
+                            Relive the
+                            nostalgia of the golden age of video games with this timeless shooter where you defend the
+                            Earth from waves of alien invaders. The game is seamlessly
+                            integrated into our webpage, providing a smooth and engaging experience
+                            whether you're playing on a desktop or mobile device. Happy playing, and may the best
+                            invader conqueror
+                            win!
+                        </p>
+                        <a href="../Space Shooters Game/index.html"
+                            class="inline-block bg-blue-800 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-950 transition duration-300">
+                            Play Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative py-16">
+        <div class="stars"></div>
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center">TIMELINE</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                    <img src="a4.jpg" alt="Space Timeline" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+                <div class="w-full md:w-1/2 md:pl-8">
+                    <div class="section-content p-6 rounded-lg">
+                        <p class="mb-4">
+                            Our comprehensive timeline of space missions offers an immersive journey through the history
+                            of
+                            humanity's exploration of the cosmos. This webpage meticulously chronicles key milestones in
+                            space exploration, from the early days of the Space
+                            Race to the latest interplanetary missions. With an intuitive and visually appealing layout,
+                            you can easily navigate through decades of space history.
+                        </p>
+                        <a href="../spacemissions_timeline/index.html"
+                            class="inline-block bg-blue-800 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-950 transition duration-300">
+                            Explore Timeline
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative py-16">
+        <div class="stars"></div>
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center">SPACE TOUR</h2>
+            <div class="flex flex-col md:flex-row-reverse items-center">
+                <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                    <img src="a5.jpg!w700wp" alt="Space Tour" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+                <div class="w-full md:w-1/2 md:pr-8">
+                    <div class="section-content p-6 rounded-lg">
+                        <p class="mb-4">
+                            Explore the wonders of the universe with our interactive Space Tour webpage. This immersive
+                            experience
+                            takes you on a virtual journey through the cosmos, allowing you to visit stunning celestial
+                            destinations from the comfort of your home. Navigate through
+                            beautifully rendered 3D models of planets, moons, stars, and galaxies, accompanied by
+                            detailed descriptions and fascinating facts.
+                        </p>
+                        <a href="../solar_tour/template.html"
+                            class="inline-block bg-blue-800 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-950 transition duration-300">
+                            Start Tour
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative py-16">
+        <div class="stars"></div>
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center">SPACE TECHNOLOGY</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                    <img src="a1.jpg" alt="Space Technology" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+                <div class="w-full md:w-1/2 md:pl-8">
+                    <div class="section-content p-6 rounded-lg">
+                        <p class="mb-4">
+                            Our Space Technology webpage delves into the cutting-edge advancements and innovations
+                            driving modern
+                            space explorationspace exploration. Here, you'll find comprehensive information about the
+                            latest spacecraft, satellites, rovers, and other
+                            groundbreaking technologies that are expanding our reach into the cosmos.
+                        </p>
+                        <a href="../Space Industry/index.html"
+                            class="inline-block bg-blue-800 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-950 transition duration-300">
+                            Discover More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <img src="52b49ab47ba026d0e01eb3346c0e029a.png" alt="Space Explorers Logo" class="h-12 w-auto">
+                </div>
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <p>&copy; 2024 Space Explorers. All rights reserved.</p>
+                    <div class="mt-2">
+                        <a href="privetpolicy.html" class="hover:text-yellow-500">Privacy Policy</a> |
+                        <a href="term.html" class="hover:text-yellow-500">Terms of Service</a> |
+                        <a href="contact.html" class="hover:text-yellow-500">Contact Us</a>
+                    </div>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#facebook" class="hover:text-yellow-500"><img src="facebook.png" alt="Facebook"
+                            class="h-6 w-6"></a>
+                    <a href="#twitter" class="hover:text-yellow-500"><img src="twitter.png" alt="Twitter"
+                            class="h-6 w-6"></a>
+                    <a href="#instagram" class="hover:text-yellow-500"><img src="instagram (1).png" alt="Instagram"
+                            class="h-6 w-6"></a>
+                    <a href="#youtube" class="hover:text-yellow-500"><img src="youtube.png" alt="YouTube"
+                            class="h-6 w-6"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Wonders</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Truculenta:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Truculenta', sans-serif;
+            background: black;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .stars {
+            width: 100%;
+            height: 100%;
+            background: url('b4.png') repeat;
+            position: absolute;
+            animation: moveStars 50s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes moveStars {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: -10000px 5000px;
+            }
+        }
+
+        .heading h1 {
+            font-size: clamp(3rem, 8vw, 9rem);
+            margin: 0;
+            background: linear-gradient(90deg, #FFD700 0%, #FFBF00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeIn 3s ease-out 3s forwards, glow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 191, 0, 0.7);
+            }
+
+            to {
+                text-shadow: 0 0 30px rgba(255, 215, 0, 1), 0 0 60px rgba(255, 191, 0, 0.8);
+            }
+        }
+
+        .heading p {
+            font-size: clamp(1.5rem, 4vw, 3rem);
+            margin: 20px 0 0;
+            animation: fadeIn 2s ease-out 2s forwards;
+            opacity: 0;
+        }
+
+        .astronaut {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: url("534-5340173_astronaut-space-cartoon-clipart.png") no-repeat center center;
+            background-size: contain;
+            z-index: 2;
+            animation: zigzag 10s linear infinite;
+        }
+
+        @keyframes zigzag {
+            0% {
+                left: -150px;
+                top: 20%;
+            }
+
+            25% {
+                left: 25%;
+                top: 30%;
+            }
+
+            50% {
+                left: 50%;
+                top: 20%;
+            }
+
+            75% {
+                left: 75%;
+                top: 30%;
+            }
+
+            100% {
+                left: 100%;
+                top: 20%;
+            }
+        }
+
+        .section-content {
+            background: rgba(58, 56, 56, 0.8);
+            border-bottom: 9px solid rgb(18, 22, 244);
+        }
+
+        .custom-box-shadow-1 {
+            box-shadow: -20px 35px 40px rgba(15, 53, 190, 0.608);
+        }
+
+        .custom-box-shadow-2 {
+            box-shadow: 20px 35px 40px rgba(15, 53, 190, 0.608);
+        }
+
+        .custom-box-shadow-3 {
+            box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .section-content {
+                max-width: 90%;
+                margin: 2rem auto;
+            }
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen">
+    <nav class="bg-black fixed top-0 left-0 right-0 z-50 bg-opacity-90">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <img class="h-8 w-auto" src="52b49ab47ba026d0e01eb3346c0e029a.png" alt="Space Wonders">
+                    <span class="text-white ml-2 text-xl font-semibold">Space Wonders</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="flex items-baseline space-x-4">
+                        <a href="#" class="bg-yellow-500 text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="../astro sites/astro.html"
+                            class="text-white hover:bg-yellow-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Astro
+                            sites</a>
+                        <a href="../solar_tour/template.html"
+                            class="text-white hover:bg-yellow-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Solar
+                            Tour</a>
+                        <a href="../Space Shooters Game/index.html"
+                            class="text-white hover:bg-yellow-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Game</a>
+                        <a href="../spacemissions_timeline/index.html"
+                            class="text-white hover:bg-yellow-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Timeline</a>
+                        <a href="../Space Industry/index.html"
+                            class="text-white hover:bg-yellow-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Technology</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-400 hover:text-white focus:outline-none focus:text-white"
+                        id="mobile-menu-button">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#" class="bg-yellow-500 text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="../astro sites/astro.html"
+                    class="text-white hover:bg-yellow-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Astro
+                    sites</a>
+                <a href="../solar_tour/template.html"
+                    class="text-white hover:bg-yellow-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Solar
+                    Tour</a>
+                <a href="../Space Shooters Game/index.html"
+                    class="text-white hover:bg-yellow-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Game</a>
+                <a href="../spacemissions_timeline/index.html"
+                    class="text-white hover:bg-yellow-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Timeline</a>
+                <a href="../Space Industry/index.html"
+                    class="text-white hover:bg-yellow-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Technology</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="welcome" class="relative flex items-center justify-center min-h-screen">
+        <div class="stars"></div>
+        <div class="heading text-center z-10">
+            <h1>Welcome to Space Wonders</h1>
+            <p>Explore the mysteries of the universe</p>
+        </div>
+        <div class="astronaut"></div>
+    </section>
+
+    <section class="py-12">
+        <div class="stars"></div>
+        <div class="container mx-auto relative">
+            <h2 data-jarallax-element="0 -300" class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8">
+                ASTRONOMICAL LINKS</h2>
+            <div class="flex flex-col lg:flex-row justify-between items-center relative w-[1000px] mx-auto">
+                <div
+                    class="relative w-[800px] h-[400px] overflow-hidden custom-box-shadow-1 border-2 border-blue-800 rounded-lg mb-8 lg:mb-0 jarallax">
+                    <img src="a1.png" alt="int1" class="jarallax-img w-full h-full object-cover">
+                </div>
+                <div
+                    class="absolute right-0 mt-20 mb-10 p-10 bg-gray-700 z-10 max-w-md text-white custom-box-shadow-3 border-b-8 border-blue-700">
+                    <p class="text-lg mb-4">Welcome to our curated collection of astronomical resources...</p>
+                    <a href="http://127.0.0.1:5500/astro%20sites/astro.html"
+                        class="inline-flex items-center rounded-lg border-2 border-white p-3 bg-blue-800 text-white font-semibold hover:bg-indigo-900">Learn
+                        More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12">
+        <div class="stars"></div>
+        <div class="container mx-auto relative">
+            <h2 data-jarallax-element="0 -300" class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8">
+                TIMELINE</h2>
+            <div class="flex flex-col lg:flex-row-reverse justify-between items-center relative w-[1000px] mx-auto">
+                <div
+                    class="relative w-[800px] h-[400px] overflow-hidden custom-box-shadow-1 border-2 border-blue-800 rounded-lg mb-8 lg:mb-0 jarallax">
+                    <img src="a1.png" alt="int1" class="jarallax-img w-full h-full object-cover">
+                </div>
+                <div
+                    class="absolute  lg:flex-row-reverse right-0 mt-20 mb-10 p-10 bg-gray-700 z-10 max-w-md text-white custom-box-shadow-3 border-b-8 border-blue-700">
+                    <p class="text-lg mb-4">Welcome to our curated collection of astronomical resources...</p>
+                    <a href="http://127.0.0.1:5500/astro%20sites/astro.html"
+                        class="inline-flex items-center rounded-lg border-2 border-white p-3 bg-blue-800 text-white font-semibold hover:bg-indigo-900">Learn
+                        More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-12">
+        <div class="stars"></div>
+        <div class="container mx-auto relative">
+            <h2 data-jarallax-element="0 300" class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8">
+                SPACE TOUR</h2>
+            <div class="flex flex-col lg:flex-row justify-between items-center relative w-[1000px] mx-auto">
+                <div
+                    class="relative w-[800px] h-[400px] overflow-hidden custom-box-shadow-1 border-2 border-blue-800 rounded-lg mb-8 lg:mb-0 jarallax">
+                    <img src="a1.png" alt="int1" class="jarallax-img w-full h-full object-cover">
+                </div>
+                <div class="absolute right-0 mt-20 mb-10 p-10 bg-gray-700 z-10 max-w-md text-white custom-box-shadow-3 border-b-8 border-blue-700"
+                    data-jarallax-element="-250 0">
+                    <p class="text-lg mb-4">Welcome to our curated collection of astronomical resources...</p>
+                    <a href="http://127.0.0.1:5500/astro%20sites/astro.html"
+                        class="inline-flex items-center rounded-lg border-2 border-white p-3 bg-blue-800 text-white font-semibold hover:bg-indigo-900">Learn
+                        More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12">
+        <div class="stars"></div>
+        <div class="container mx-auto relative">
+            <h2 data-jarallax-element="0 -300" class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8">
+                TIMELINE</h2>
+            <div class="flex flex-col lg:flex-row justify-between items-center relative w-[1000px] mx-auto">
+                <div
+                    class="relative w-[800px] h-[400px] overflow-hidden custom-box-shadow-1 border-2 border-blue-800 rounded-lg mb-8 lg:mb-0 jarallax">
+                    <img src="a1.png" alt="int1" class="jarallax-img w-full h-full object-cover">
+                </div>
+                <div
+                    class="absolute right-0 mt-20 mb-10 p-10 bg-gray-700 z-10 max-w-md text-white custom-box-shadow-3 border-b-8 border-blue-700">
+                    <p class="text-lg mb-4">Welcome to our curated collection of astronomical resources...</p>
+                    <a href="http://127.0.0.1:5500/astro%20sites/astro.html"
+                        class="inline-flex items-center rounded-lg border-2 border-white p-3 bg-blue-800 text-white font-semibold hover:bg-indigo-900">Learn
+                        More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12">
+        <div class="stars"></div>
+        <div class="container mx-auto relative">
+            <h2 data-jarallax-element="0 -300" class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8">SPACE
+                TECHNOLOGY FACTS</h2>
+            <div class="flex flex-col lg:flex-row justify-between items-center relative w-[1000px] mx-auto">
+                <div
+                    class="relative w-[800px] h-[400px] overflow-hidden custom-box-shadow-1 border-2 border-blue-800 rounded-lg mb-8 lg:mb-0 jarallax">
+                    <img src="a1.png" alt="int1" class="jarallax-img w-full h-full object-cover">
+                </div>
+                <div
+                    class="absolute right-0 mt-20 mb-10 p-10 bg-gray-700 z-10 max-w-md text-white custom-box-shadow-3 border-b-8 border-blue-700">
+                    <p class="text-lg mb-4">Welcome to our curated collection of astronomical resources...</p>
+                    <a href="http://127.0.0.1:5500/astro%20sites/astro.html"
+                        class="inline-flex items-center rounded-lg border-2 border-white p-3 bg-blue-800 text-white font-semibold hover:bg-indigo-900">Learn
+                        More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-between items-center">
+                <div class="w-full md:w-1/3 mb-6 md:mb-0">
+                    <img src="52b49ab47ba026d0e01eb3346c0e029a.png" alt="Space Explorers Logo" class="h-12 mb-2">
+                    <p>&copy; 2024 Space Explorers. All rights reserved.</p>
+                </div>
+                <div class="w-full md:w-1/3 mb-6 md:mb-0">
+                    <h3 class="text-lg font-semibold mb-2">Quick Links</h3>
+                    <ul>
+                        <li><a href="privetpolicy.html" class="hover:text-yellow-500">Privacy Policy</a></li>
+                        <li><a href="term.html" class="hover:text-yellow-500">Terms of Service</a></li>
+                        <li><a href="contact.html" class="hover:text-yellow-500">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/3">
+                    <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#facebook" class="hover:text-yellow-500"><img src="facebook.png" alt="Facebook"
+                                class="h-6"></a>
+                        <a href="#twitter" class="hover:text-yellow-500"><img src="twitter.png" alt="Twitter"
+                                class="h-6"></a>
+                        <a href="#instagram" class="hover:text-yellow-500"><img src="instagram (1).png" alt="Instagram"
+                                class="h-6"></a>
+                        <a href="#youtube" class="hover:text-yellow-500"><img src="youtube.png" alt="YouTube"
+                                class="h-6"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="jarallax.js"></script>
+    <script src="jarallax-element.js"></script>
+    <script type="text/javascript">
+        jarallax(document.querySelectorAll('.jarallax'), {
+            speed: 0.2,
+        });
+        jarallax(document.querySelectorAll('[data-jarallax-element]'), {
+            speed: 0.2,
+        });
+    </script>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        /* // Initialize Jarallax
+         jarallax(document.querySelectorAll('.jarallax'), {
+             speed: 0.2,
+         });
+         jarallax(document.querySelectorAll('[data-jarallax-element]'), {
+             speed: 0.2,
+         });*/
+    </script>
+</body>
+
+</html>
