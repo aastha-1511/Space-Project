@@ -21,10 +21,9 @@ h1 {
 
 .timeline {
     position: relative;
-    width: cover;
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding:0 ;
 }
 
 .line {
@@ -39,7 +38,7 @@ h1 {
     z-index: 2;
 }
 
-.line::after,
+/*.line::after,
 .line::before {
     position: absolute;
     display: block;
@@ -50,7 +49,7 @@ h1 {
     background-color: black;
     left: 50%;
     transform: translateX(-50%);
-}
+}*/
 
 .line::after {
     bottom: 0;
@@ -163,7 +162,7 @@ h1 {
 @media screen and (max-width: 768px) {
     .timeline {
         width: 100%;
-        padding: 1rem;
+        padding: 0;
     }
 
     .line {
@@ -200,15 +199,54 @@ nav li {
     list-style-type: none;
 }
 
-.fixed-button {
+.fixed-button1 {
     position: fixed;
     top: 80px;
     right: 20px;
     z-index: 1000;
 }
 
+.fixed-button2 {
+    position: fixed;
+    top: 140px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.fixed-button3 {
+    position: fixed;
+    top: 200px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.fixed-button4 {
+    position: fixed;
+    top: 260px;
+    right: 20px;
+    z-index: 1000;
+}
+
 @media screen and (max-width: 768px) {
-    .fixed-button {
+    .fixed-button1 {
+        bottom: 200px;
+        top: auto;
+        right: 20px;
+    }
+
+    .fixed-button2 {
+        bottom: 140px;
+        top: auto;
+        right: 20px;
+    }
+
+    .fixed-button3 {
+        bottom: 80px;
+        top: auto;
+        right: 20px;
+    }
+
+    .fixed-button4 {
         bottom: 20px;
         top: auto;
         right: 20px;
