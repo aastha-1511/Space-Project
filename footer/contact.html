@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Themed Website - Contact Us</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("glowing-sky-sphere-orbits-starry-galaxy-generated-by-ai.jpg");
+            background-size: cover;
+            background-position: center;
+            color: #ffffff; 
+        }
+        .contact-us {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+        .contact-us h2 {
+            color: #4caf50;
+        }
+        .contact-us p {
+            margin: 10px 0;
+        }
+        .contact-us form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-us label {
+            margin: 10px 0 5px;
+        }
+        .contact-us input,
+        .contact-us textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .contact-us input[type="submit"] {
+            background-color: #4caf50;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        .contact-us input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .submitted-message {
+            display: none;
+            color: #4caf50;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function showSubmittedMessage() {
+            document.getElementById("submittedMessage").style.display = "block";
+        }
+    </script>
+</head>
+<body>
+
+    <div class="contact-us">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, please feel free to reach out to us. We'd love to hear from you!</p>
+        <form action="mailto:info@spaceexplorers.com" method="post" enctype="text/plain" onsubmit="showSubmittedMessage()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <input type="submit" value="Send">
+        </form>
+        <div id="submittedMessage" class="submitted-message">
+            Your query has been submitted. We will respond soon!
+        </div>
+    </div>
+
+</body>
+</html>
