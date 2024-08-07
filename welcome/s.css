@@ -103,7 +103,7 @@ body {
     height: 150px;
     background: url("media/astronut.png") no-repeat center center;
     background-size: contain;
-    z-index: 6;
+    z-index: 30;
     top: 37%;
     /* Adjusted to ensure it moves above the text */
     animation: zigzag 10s linear infinite;
