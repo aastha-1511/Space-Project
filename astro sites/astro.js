@@ -9,38 +9,39 @@
     });
 });*/
 document.addEventListener('DOMContentLoaded', () => {
-    // Preload GIFs
-    /*document.querySelectorAll('.animated-gif').forEach(img => {
-        const imgPreload = new Image();
-        imgPreload.jpg = img.jpg;
-    });*/
-    const gifS=[
-        'gif1.gif',
-        'gif2.gif',
-        'gif3.gif',
-        'gif4.gif',
-        'gif5.gif'
+    // Preload images
+    const gifS = [
+        'vid1.mp4',
+        'vid3.mp4',
+        'vid2.mp4',
+        'vid4.mp4',
+        'vid5.mp4'
     ];
 
-    gifS.forEach(jpg=>{
-        const imgPreload=new Image();
-        imgPreload.jpg=jpg;
-    })
-    document.querySelectorAll('image-container').forEach(container=>{
-        container.style.display='block';
-    })
-    let next=document.querySelector('.next');
-    let prev=document.querySelector('.prev');
-
-
-    next.addEventListener('click',function(){
-        let items=document.querySelectorAll('.item');
-        document.querySelector('.slide').appendChild(items[0]);
+    gifS.forEach(video => {
+        const videoPreload = document.createElement('video');
+        videoPreload.src = video;
+        videoPreload.preload = 'auto';
     });
 
-    prev.addEventListener('click',function(){
-        let items=document.querySelectorAll('.item');
-        document.querySelector('.slide').prepend(items[items.length -1]);
+    // Show image containers
+    document.querySelectorAll('.image-container').forEach(container => {
+        container.style.display = 'block';
+    });
+
+    // Slider functionality
+    let next = document.querySelector('.next');
+    let prev = document.querySelector('.prev');
+    let slide = document.querySelector('.slide');
+
+    next.addEventListener('click', function() {
+        let items = document.querySelectorAll('.item');
+        slide.appendChild(items[0]); // Move the first item to the end
+    });
+
+    prev.addEventListener('click', function() {
+        let items = document.querySelectorAll('.item');
+        slide.prepend(items[items.length - 1]); // Move the last item to the beginning
     });
 });
 

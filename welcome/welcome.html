@@ -10,10 +10,9 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <!--<link rel="stylesheet" href="main.css">-->
 
-  <!--<style>
-    @import url('https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap');
-  </style>-->
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Truculenta:wght@400;700&display=swap');
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -34,7 +33,7 @@
 
     .footer .logo {
       margin-bottom: 20px;
-      display:inline-block;
+      display: inline-block;
     }
 
     .footer .logo img {
@@ -100,7 +99,9 @@
                       src="image.png" alt="Workflow">-->
             <img class="hidden lg:block pb-1 h-12 w-auto" src="52b49ab47ba026d0e01eb3346c0e029a.png" alt="Workflow">
           </div>
-          <div class="text-white ml-2 text-xl p-2 font-semibold">Space Wonders</div>
+          <div
+            class="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text ml-2 text-xl p-2 font-semibold">
+            Space Wonders</div>
           <div class="hidden sm:block sm:ml-96">
             <!-- Changed from sm:ml-4 to sm:ml-auto -->
             <div class="flex space-x-4">
@@ -116,7 +117,7 @@
               <a href="../spacemissions_timeline\index.html"
                 class="text-white  hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Timeline</a>
               <a href="../Space Industry\index.html"
-                class="text-white  hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Technology</a>
+                class="text-white  hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Facts</a>
             </div>
           </div>
         </div>
@@ -126,34 +127,36 @@
     <!-- Mobile menu, show/hide based on menu state. -->
     <div class="sm:hidden hidden" id="mobile-menu">
       <div class="sm:hidden" id="mobile-menu">
+        <!--<div
+          class="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text text-l p-2 mr-19 font-semibold ">
+          Space Wonders</div>-->
         <div class="px-2 pt-2 pb-3 space-y-1">
           <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
-          <a href="../astro sites\astro.html"
-            class="text-white  hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Astro
+          <a href="../astro sites/astro.html"
+            class="text-white hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Astro
             sites</a>
-          <a href="../solar_tour\template.html"
-            class="text-white  hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Solar
+          <a href="../solar_tour/template.html"
+            class="text-white hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Solar
             Tour</a>
-          <a href="../Space Shooters Game\index.html"
-            class="text-white  hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Game</a>
-          <a href="../spacemissions_timeline\index.html"
-            class="text-white  hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Timeline</a>
-          <a href="../Space Industry\index.html"
-            class="text-white  hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Technology</a>
+          <a href="../Space Shooters Game/index.html"
+            class="text-white hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Game</a>
+          <a href="../spacemissions_timeline/index.html"
+            class="text-white hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Timeline</a>
+          <a href="../Space Industry/index.html"
+            class="text-white hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Technology</a>
         </div>
       </div>
     </div>
   </nav>
 
-  <section id="welcome" class="welcome-bg">
+  <section id="welcome" class="welcome-bg h-screen flex items-center justify-center">
     <div class="stars"></div>
-    <div class="heading">
-      <h1>Welcome to Space Wonders</h1>
-      <p>Explore the mysteries of the universe</p>
+    <div class="heading text-center z-10">
+      <h1 class="mb-4">Welcome to Space Wonders</h1>
+      <p class="text-2xl md:text-3xl">Explore the mysteries of the universe</p>
     </div>
-    <div class="astronaut"></div>
+    <div class="astronaut hidden md:block"></div>
   </section>
-  </div>
 
   <section class="section2">
     <div class="stars"></div>
@@ -161,7 +164,7 @@
       <h2 data-jarallax-element="0 -300">ASTRONOMICAL LINKS</h2>
       <div class="contain">
         <div class="imgb jarallax" id="sec-2">
-          <img src="a1.png" alt="int1" class="jarallax-img">
+          <img src="a2.jpg" alt="int1" class="jarallax-img">
         </div>
         <div class="about" data-jarallax-element="-250 0">
           <p> Welcome to our curated collection of astronomical resources, where we've gathered a
@@ -194,7 +197,7 @@
             integrated into our webpage, providing a smooth and engaging experience
             whether you're playing on a desktop or mobile device.Happy playing, and may the best invader conqueror
             win! </p>
-            <a href="http://127.0.0.1:5500/Space%20Shooters%20Game/index.html"
+          <a href="http://127.0.0.1:5500/Space%20Shooters%20Game/index.html"
             class="inline-flex items-center rounded-lg border-2 border-white p-1 ml-[115px] mt-2 bg-blue-800 text-white font-semibold hover:bg-indigo-950">
             Learn More
           </a>
@@ -275,25 +278,6 @@
   </div>
   <footer>
     <div class="footer-container">
-      <div class="footer-logo">
-        <img src="52b49ab47ba026d0e01eb3346c0e029a.png" alt="Space Logo">
-      </div>
-      <!-- <div class="footer-nav">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#skydiary">Sky Diary</a></li>
-          <li><a href="#merchandise">Merchandise</a></li>
-        </ul>
-      </div>
-      <div class="footer-social">
-        <a href="#">f<i class="fab fa-facebook-f"></i></a>
-        <a href="#">t<i class="fab fa-twitter"></i></a>
-        <a href="#">i<i class="fab fa-instagram"></i></a>
-        <a href="#">l<i class="fab fa-linkedin-in"></i></a>
-      </div>
-      <div class="footer-info">
-        <p>&copy; 2024 Space Website. All rights reserved.</p>
-      </div> -->
       <!-- Footer Section -->
       <div class="footer">
         <div class="logo">
