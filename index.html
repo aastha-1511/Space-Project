@@ -1,3 +1,328 @@
+<<<<<<< HEAD:welcome/welcome.html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Wonders</title>
+  <link rel="stylesheet" href="jarallax.css">
+  <link rel="stylesheet" href="s.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!--<link rel="stylesheet" href="main.css">-->
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Truculenta:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-size: cover;
+      background-position: center;
+      color: #ffffff;
+    }
+
+    .footer {
+      background-color: rgba(17, 17, 17, 0.8);
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .footer .logo {
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    .footer .logo img {
+      width: 100px;
+    }
+
+    .footer p {
+      margin: 5px 0;
+    }
+
+    .footer a {
+      color: #4caf50;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer .social-icons {
+      display: flex;
+      justify-content: center;
+      /* Center the icons horizontally */
+      margin: 10px 0;
+    }
+
+    .footer .social-icons a {
+      margin: 0 10px;
+      /* Space between icons */
+    }
+
+    .footer .social-icons img {
+      width: 24px;
+      /* Size of the icons */
+      vertical-align: middle;
+    }
+  </style>
+</head>
+
+<body class="flex flex-col min-h-screen">
+  <nav class="bg-black fixed top-0 left-0 right-0 z-50 bg-opacity-90">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="relative flex items-center justify-between h-16">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <button type="button"
+            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex-shrink-0 flex items-center">
+            <!--<img class="block lg:hidden h-13 w-auto"
+                      src="image.png" alt="Workflow">-->
+            <img class="hidden lg:block pb-1 h-12 w-auto" src="media/logo.png" alt="Workflow">
+          </div>
+          <div class="bg-gradient-to-r from-blue-500 via-yellow-500 to-blue-400 inline-block text-transparent bg-clip-text ml-2 text-xl p-2 font-semibold">Space Wonders</div>
+          <div class="hidden sm:block sm:ml-96">
+            <!-- Changed from sm:ml-4 to sm:ml-auto -->
+            <div class="flex space-x-4">
+              <a href="#" class="bg-yellow-500 text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+              <a href="../astro sites\astro.html"
+                class="text-white hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Astro
+                sites</a>
+              <a href="../solar_tour\template.html"
+                class="text-white  hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Solar
+                Tour</a>
+              <a href="../Space Shooters Game\index.html"
+                class="text-white  hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Game</a>
+              <a href="../spacemissions_timeline\index.html"
+                class="text-white  hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Timeline</a>
+              <a href="../Space Industry\index.html"
+                class="text-white  hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Facts</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden hidden" id="mobile-menu">
+      <div class="sm:hidden" id="mobile-menu">
+        <!--<div
+          class="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text text-l p-2 mr-19 font-semibold ">
+          Space Wonders</div>-->
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+          <a href="../astro sites/astro.html"
+            class="text-white hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Astro
+            sites</a>
+          <a href="../solar_tour/template.html"
+            class="text-white hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Solar
+            Tour</a>
+          <a href="../Space Shooters Game/index.html"
+            class="text-white hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Game</a>
+          <a href="../spacemissions_timeline/index.html"
+            class="text-white hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Timeline</a>
+          <a href="../Space Industry/index.html"
+            class="text-white hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Technology</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section id="welcome" class="welcome-bg h-screen flex items-center justify-center">
+    <div class="stars"></div>
+    <div class="heading text-center z-10">
+      <h1 class="mb-4">Welcome to Space Wonders</h1>
+      <p class="text-2xl md:text-3xl">Explore the mysteries of the universe</p>
+    </div>
+    <div class="astronaut hidden md:block"></div>
+  </section>
+
+  <section class="section2">
+    <div class="stars"></div>
+    <div class="box">
+      <h2 data-jarallax-element="0 -300">ASTRONOMICAL LINKS</h2>
+      <div class="contain">
+        <div class="imgb jarallax" id="sec-2">
+          <img src="media/astro.jpg" alt="int1" class="jarallax-img">
+        </div>
+        <div class="about" data-jarallax-element="-250 0">
+          <p> Welcome to our curated collection of astronomical resources, where we've gathered a
+            comprehensive list of the most informative and fascinating websites dedicated to the wonders of the
+            universe.
+            Whether you're an amateur stargazer or a seasoned astronomer, you'll find valuable information and
+            engaging content that will deepen your understanding and appreciation of the cosmos.
+            Each link is carefully selected to ensure high-quality, reliable, and up-to-date information, making this
+            your go-to resource for all things astronomical.</p>
+          <a href="http://127.0.0.1:5500/astro%20sites/astro.html"
+            class="inline-flex items-center rounded-lg border-2 border-white p-1 ml-[115px] mt-2 bg-blue-800 text-white font-semibold hover:bg-indigo-950">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section2">
+    <div class="stars"></div>
+    <div class="box">
+      <h2 data-jarallax-element="0 300">SPACE-INVADERS</h2>
+      <div class="contain">
+        <div class="imgb jarallax" id="sec-3">
+          <img src="media/game.jpg" alt="int2" class="jarallax-img">
+        </div>
+        <div class="about" data-jarallax-element="-250 0">
+          <p> Welcome to our interactive gaming page, featuring the classic arcade game, Space Invader! Relive the
+            nostalgia of the golden age of video games with
+            this timeless shooter where you defend the Earth from waves of alien invaders. The game is seamlessly
+            integrated into our webpage, providing a smooth and engaging experience
+            whether you're playing on a desktop or mobile device.Happy playing, and may the best invader conqueror
+            win! </p>
+          <a href="http://127.0.0.1:5500/Space%20Shooters%20Game/index.html"
+            class="inline-flex items-center rounded-lg border-2 border-white p-1 ml-[115px] mt-2 bg-blue-800 text-white font-semibold hover:bg-indigo-950">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section2">
+    <div class="stars"></div>
+    <div class="box">
+      <h2 data-jarallax-element="0 -300">TIMELINE</h2>
+      <div class="contain">
+        <div class="imgb jarallax" id="sec-4">
+          <img src="media/timeline.jpg" alt="int3" class="jarallax-img">
+        </div>
+        <div class="about" data-jarallax-element="-250 0">
+          <p> Our comprehensive timeline of space missions offers an immersive journey through the history of
+            humanity's exploration of the cosmos.
+            This webpage meticulously chronicles key milestones in space exploration, from the early days of the Space
+            Race to the latest interplanetary missions.
+            With an intuitive and visually appealing layout, you can easily navigate through decades of space history.
+            Whether you're a space enthusiast, student, or researcher, this timeline offers a rich and educational
+            experience, highlighting the incredible progress we've made in our quest to explore the final frontier.
+          </p>
+          <a href="http://127.0.0.1:5500/spacemissions_timeline/index.html"
+            class="inline-flex items-center rounded-lg border-2 border-white p-1 ml-[115px] mt-2 bg-blue-800 text-white font-semibold hover:bg-indigo-950">
+            Learn More
+          </a>
+      </div>
+    </div>
+  </section>
+  <section class="section2">
+    <div class="stars"></div>
+    <div class="box">
+      <h2 data-jarallax-element="0 300">SPACE TOUR</h2>
+      <div class="contain">
+        <div class="imgb jarallax" id="sec-5">
+          <img src="media/tour.jpg!w700wp" alt="int4" class="jarallax-img">
+        </div>
+        <div class="about" data-jarallax-element="-250 0">
+          <p> Explore the wonders of the universe with our interactive Space Tour webpage. This immersive experience
+            takes you on a virtual journey through the cosmos,
+            allowing you to visit stunning celestial destinations from the comfort of your home.Navigate through
+            beautifully rendered 3D models of planets, moons, stars, and galaxies,
+            accompanied by detailed descriptions and fascinating facts.Perfect for students, space enthusiasts, and
+            curious minds, this webpage brings the marvels of space exploration
+            to your fingertips, inspiring a deeper appreciation for the vast and mysterious universe we inhabit.
+          </p>
+          <a href="http://127.0.0.1:5500/solar_tour/template.html"
+            class="inline-flex items-center rounded-lg border-2 border-white p-1 ml-[115px] mt-2 bg-blue-800 text-white font-semibold hover:bg-indigo-950">
+            Learn More
+          </a>
+      </div>
+    </div>
+  </section>
+  <section class="section2">
+    <div class="stars"></div>
+    <div class="box">
+      <h2 data-jarallax-element="0 -300">SPACE TECHNOLOGY</h2>
+      <div class="contain">
+        <div class="imgb jarallax" id="sec-6">
+          <img src="media/tech.jpg" alt="int5" class="jarallax-img">
+        </div>
+        <div class="about" data-jarallax-element="-250 0">
+          <p> Our Space Technology webpage delves into the cutting-edge advancements and innovations driving modern
+            space exploration.
+            Here, you'll find comprehensive information about the latest spacecraft, satellites, rovers, and other
+            groundbreaking technologies that are expanding our reach into the cosmos.</p>
+            <a href="http://127.0.0.1:5500/solar_tour/template.html"
+            class="inline-flex items-center rounded-lg border-2 border-white p-1 ml-[115px] mt-2 bg-blue-800 text-white font-semibold hover:bg-indigo-950">
+            Learn More
+          </a>
+      </div>
+    </div>
+  </section>
+  <div class="content">
+    <!-- Your main content here -->
+  </div>
+  <footer>
+    <div class="footer-container">
+      <!-- Footer Section -->
+      <div class="footer">
+        <div class="logo">
+          <img src="media/logo.png" alt="Space Explorers Logo">
+        </div>
+        <p>&copy; 2024 Space Explorers. All rights reserved.</p>
+        <p>
+          <a href="privetpolicy.html">Privacy Policy</a> |
+          <a href="term.html">Terms of Service</a> |
+          <a href="contact.html">Contact Us</a>
+        </p>
+        <div class="social-icons">
+          <a href="#facebook"><img src="media/facebook.png" alt="Facebook"></a>
+          <a href="#twitter"><img src="media/twitter.png" alt="Twitter"></a>
+          <a href="#instagram"><img src="media/instagram (1).png" alt="Instagram"></a>
+          <a href="#youtube"><img src="media/youtube.png" alt="YouTube"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="jarallax.js"></script>
+  <script src="jarallax-element.js"></script>
+  <script type="text/javascript">
+    jarallax(document.querySelectorAll('.jarallax'), {
+      speed: 0.2,
+    });
+    jarallax(document.querySelectorAll('[data-jarallax-element]'), {
+      speed: 0.2,
+    });
+  </script>
+  <script>
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu"]');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+      mobileMenuButton.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('hidden');
+      mobileMenuButton.querySelector('svg:nth-child(1)').classList.toggle('hidden');
+      mobileMenuButton.querySelector('svg:nth-child(2)').classList.toggle('hidden');
+    });
+  </script>
+</body>
+
+=======
 <!DOCTYPE html>
 <html lang="en">
 
@@ -341,4 +666,5 @@
   </script>
 </body>
 
+>>>>>>> 1e609e4aecbe2053205740b05495d48c706d88e9:index.html
 </html>
