@@ -194,8 +194,9 @@ body .solar_systm .planet.neptune .nereid .popup {
   overflow: hidden;
   background: black;
   height: 100vh;
-  font-family: "Montserrat", sans-serif;
+  font-family: Arial, sans-serif;
  }
+ 
  body .logo {
    color: white;
    position: absolute;
