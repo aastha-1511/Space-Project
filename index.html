@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Space Wonders</title>
+  <link rel="shortcut icon" href ="welcome/media/logo.png">
   <link rel="stylesheet" href="welcome/s.css">
   <link rel="stylesheet" href="footer/footer.css">
   <link rel="stylesheet" href="welcome/jarallax.css">
@@ -101,21 +101,23 @@
                       src="image.png" alt="Workflow">-->
             <img class="hidden lg:block pb-1 h-12 w-auto" src="welcome/media/logo.png" alt="Workflow">
           </div>
-          <div class="bg-gradient-to-r from-blue-500 via-yellow-500 to-blue-400 inline-block text-transparent bg-clip-text ml-2 text-xl p-2 font-semibold">Space Wonders</div>
-          <div class="hidden sm:block sm:ml-96">
+          <div
+            class="bg-gradient-to-r from-blue-500 via-yellow-500 to-blue-400 inline-block text-transparent bg-clip-text ml-2 text-xl p-2 font-semibold">
+            Space Wonders</div>
+          <div class="hidden sm:block sm:ml-96 mt-1">
             <!-- Changed from sm:ml-4 to sm:ml-auto -->
             <div class="flex space-x-4">
-              <a href="#" class="bg-yellow-500 text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+              <a href="#" class="bg-yellow-500 text-white px-3 py-2 rounded-md font-medium">Home</a>
               <a href="astro sites\astro.html"
                 class="text-white hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Astro
                 sites</a>
-              <a href="solar_tour\template.html"
-                class="text-white  hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Solar
-                Tour</a>
               <a href="Space Shooters Game\index.html"
                 class="text-white  hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Game</a>
               <a href="spacemissions_timeline\index.html"
                 class="text-white  hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Timeline</a>
+              <a href="solar_tour\template.html"
+                class="text-white  hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Solar
+                Tour</a>
               <a href="Space Industry\index.html"
                 class="text-white  hover:bg-yellow-500 hover:bg-opacity-70 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Facts</a>
             </div>
@@ -161,7 +163,7 @@
   <section class="section2">
     <div class="stars"></div>
     <div class="box">
-      <h2 data-jarallax-element="0 -300">ASTRONOMICAL LINKS</h2>
+      <h2 data-jarallax-element="0 -300">ASTRONOMICAL SITES</h2>
       <div class="contain">
         <div class="imgb jarallax" id="sec-2">
           <img src="welcome/media/astro.jpg" alt="int1" class="jarallax-img">
@@ -223,8 +225,9 @@
             experience, highlighting the incredible progress we've made in our quest to explore the final frontier.
           </p>
           <a href="spacemissions_timeline\index.html"
-            class="inline-flex items-center rounded-lg border-2 border-white p-1 ml-[115px] mt-2 bg-blue-800 text-white font-semibold hover:bg-indigo-950">See Timeline
-            </a>
+            class="inline-flex items-center rounded-lg border-2 border-white p-1 ml-[115px] mt-2 bg-blue-800 text-white font-semibold hover:bg-indigo-950">See
+            Timeline
+          </a>
         </div>
       </div>
     </div>
@@ -247,8 +250,9 @@
             to your fingertips, inspiring a deeper appreciation for the vast and mysterious universe we inhabit.
           </p>
           <a href="solar_tour/template.html"
-            class="inline-flex items-center rounded-lg border-2 border-white p-1 ml-[115px] mt-2 bg-blue-800 text-white font-semibold hover:bg-indigo-950">Visit Space
-            </a>
+            class="inline-flex items-center rounded-lg border-2 border-white p-1 ml-[115px] mt-2 bg-blue-800 text-white font-semibold hover:bg-indigo-950">Visit
+            Space
+          </a>
         </div>
       </div>
     </div>
@@ -266,57 +270,61 @@
             space exploration.
             Here, you'll find comprehensive information about the latest spacecraft, satellites, rovers, and other
             groundbreaking technologies that are expanding our reach into the cosmos.</p>
-            <a href="Space Industry/index.html"
-            class="inline-flex items-center rounded-lg border-2 border-white p-1 ml-[115px] mt-2 bg-blue-800 text-white font-semibold hover:bg-indigo-950">Learn More
-            </a>
+          <a href="Space Industry/index.html"
+            class="inline-flex items-center rounded-lg border-2 border-white p-1 ml-[115px] mt-2 bg-blue-800 text-white font-semibold hover:bg-indigo-950">Learn
+            More
+          </a>
         </div>
       </div>
     </div>
   </section>
   <div class="footer">
     <div class="contact-us">
-        <h2 class="text-yellow-500">Contact Us</h2>
-        <p>If you have any questions, please feel free to reach out to us. We'd love to hear from you!</p>
-        <form action="mailto:wondersspace097@gmail.com" method="post" enctype="text/plain" onsubmit="showSubmittedMessage()">
-            <input type="hidden" name="email" value="wondersspace097@gmail.com">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="3" required></textarea>
-            <input type="submit" class="bg-yellow-500" value="Send">
-        </form>
-        <div id="submittedMessage" class="submitted-message">
-            Your query has been submitted. We will respond soon!
-        </div>
+      <h2 class="text-yellow-500">Contact Us</h2>
+      <p>If you have any questions, please feel free to reach out to us. We'd love to hear from you!</p>
+      <form action="mailto:wondersspace097@gmail.com" method="post" enctype="text/plain"
+        onsubmit="showSubmittedMessage()">
+        <input type="hidden" name="email" value="wondersspace097@gmail.com">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="3" required></textarea>
+        <input type="submit" class="bg-yellow-500" value="Send">
+      </form>
+      <div id="submittedMessage" class="submitted-message">
+        Your query has been submitted. We will respond soon!
+      </div>
     </div>
 
     <div class="right-section">
-        <div class="logo">
-            <img src="welcome/media/logo.png" alt="Space Explorers Logo">
-        </div>
-        <p>&copy; 2024 Space Explorers. All rights reserved.</p>
-        <p class="text-yellow-500">
-            <a href="footer\privetpolicy.html">Privacy-policy & Terms-of-service</a>
-        </p>
-        <div class="social-icons flex">
-            <a href="https://www.facebook.com/"><img src="footer/media/icons8-facebook-24 (1).png" alt="Facebook"></a>
-            <a href="https://x.com/?mx=2"><img src="footer/media/icons8-twitter-24 (1).png" alt="Twitter"></a>
-            <a href="https://www.instagram.com/"><img src="footer/media/icons8-instagram-24 (1).png" alt="Instagram"></a>
-            <a href="https://www.youtube.com/"><img src="footer/media/icons8-youtube-24 (1).png" alt="YouTube"></a>
-        </div>
-        <div class="iframe-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d344267.6834631096!2d72.78337315753859!3d21.17024022657681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be06c5a54776a15%3A0x1fa3f1dbf1f6a3f1!2sSardar%20Vallabhbhai%20National%20Institute%20of%20Technology%2C%20Surat!5e0!3m2!1sen!2sin!4v1646133387756!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
-        </div>
+      <div class="logo">
+        <img src="welcome/media/logo.png" alt="Space Explorers Logo">
+      </div>
+      <p>&copy; 2024 Space Explorers. All rights reserved.</p>
+      <p class="text-yellow-500">
+        <a href="footer\privetpolicy.html">Privacy-policy & Terms-of-service</a>
+      </p>
+      <div class="social-icons flex">
+        <a href="https://www.facebook.com/"><img src="footer/media/icons8-facebook-24 (1).png" alt="Facebook"></a>
+        <a href="https://x.com/?mx=2"><img src="footer/media/icons8-twitter-24 (1).png" alt="Twitter"></a>
+        <a href="https://www.instagram.com/"><img src="footer/media/icons8-instagram-24 (1).png" alt="Instagram"></a>
+        <a href="https://www.youtube.com/"><img src="footer/media/icons8-youtube-24 (1).png" alt="YouTube"></a>
+      </div>
+      <div class="iframe-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d344267.6834631096!2d72.78337315753859!3d21.17024022657681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be06c5a54776a15%3A0x1fa3f1dbf1f6a3f1!2sSardar%20Vallabhbhai%20National%20Institute%20of%20Technology%2C%20Surat!5e0!3m2!1sen!2sin!4v1646133387756!5m2!1sen!2sin"
+          allowfullscreen="" loading="lazy"></iframe>
+      </div>
     </div>
-</div>
-<script>
+  </div>
+  <script>
     function showSubmittedMessage() {
-        document.getElementById("submittedMessage").style.display = "block";
+      document.getElementById("submittedMessage").style.display = "block";
     }
-</script>
-  
+  </script>
+
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <script src="welcome/jarallax.js"></script>
   <script src="welcome/jarallax-element.js"></script>
@@ -341,4 +349,5 @@
     });
   </script>
 </body>
+
 </html>

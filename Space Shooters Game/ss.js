@@ -77,8 +77,8 @@ window.onload = function(){
         _enemies = []; 
         var enemyImg = new Image();
         enemyImg.src = "https://i.ibb.co/0YgHvmx/enemy-fotor-20230927153748.png"
-        var enemy_width = 52;
-        var enemy_height = 52;
+        var enemy_width = 82;
+        var enemy_height = 82;
     
         _healthkits = []; 
         var healthkitImg = new Image();

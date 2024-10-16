@@ -36,6 +36,7 @@ h1 {
     left: 50%;
     margin: 0 auto;
     z-index: 2;
+    height: 2400px;
 }
 
 /*.line::after,
@@ -228,6 +229,9 @@ nav li {
 }
 
 @media screen and (max-width: 768px) {
+    .line{
+        height: 3000px;
+    }
     .fixed-button1 {
         bottom: 200px;
         top: auto;
